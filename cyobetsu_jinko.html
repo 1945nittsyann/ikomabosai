@@ -1,0 +1,1493 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+<STYLE TYPE="text/css">
+<!-- 
+.table1 { 
+border-collapse: collapse; 
+border: 1px #1C79C6 solid;
+} 
+-->
+</STYLE> 
+<SCRIPT language="JavaScript">
+<!--
+var DTNum =  8 ;
+var ObJNum =  110 ;
+var LinkNum = -1 ;
+DataTitle=new Array( 8 );
+DataUnit=new Array( 8 );
+
+objName=new Array( 110 );
+objData=new Array( 110 );
+objLinkName=new Array( 110 );
+objLinkAddress=new Array( 110 );
+for(n = 0; n <  110 ; ++n){
+objData[n] = new Array( 8 );
+}
+
+if(LinkNum != -1){
+for(n = 0; n < ObJNum ; ++n){
+objLinkName[n] = new Array(-1 );
+objLinkAddress[n] = new Array(-1 );
+}
+}
+
+DataTitle[0]="人口";
+DataTitle[1]="14歳以下";
+DataTitle[2]="15～64歳";
+DataTitle[3]="65歳以上";
+DataTitle[4]="年少者割合";
+DataTitle[5]="高齢者割合";
+DataTitle[6]="年少者順位";
+DataTitle[7]="高齢者順位";
+
+DataUnit[0]="(人)";
+DataUnit[1]="(人)";
+DataUnit[2]="(人)";
+DataUnit[3]="(人)";
+DataUnit[4]="(%)";
+DataUnit[5]="(%)";
+DataUnit[6]="";
+DataUnit[7]="";
+
+objName[0]="高山町";
+objData[0][0]=" 3825 ";
+objData[0][1]=" 335 ";
+objData[0][2]=" 2241 ";
+objData[0][3]=" 1249 ";
+objData[0][4]=" 8.8 ";
+objData[0][5]=" 32.7 ";
+objData[0][6]=" 90 ";
+objData[0][7]=" 46 ";
+
+objName[1]="ひかりが丘１丁目";
+objData[1][0]=" 749 ";
+objData[1][1]=" 82 ";
+objData[1][2]=" 466 ";
+objData[1][3]=" 201 ";
+objData[1][4]=" 10.9 ";
+objData[1][5]=" 26.8 ";
+objData[1][6]=" 64 ";
+objData[1][7]=" 66 ";
+
+objName[2]="ひかりが丘２丁目";
+objData[2][0]=" 630 ";
+objData[2][1]=" 77 ";
+objData[2][2]=" 362 ";
+objData[2][3]=" 191 ";
+objData[2][4]=" 12.2 ";
+objData[2][5]=" 30.3 ";
+objData[2][6]=" 55 ";
+objData[2][7]=" 53 ";
+
+objName[3]="ひかりが丘３丁目";
+objData[3][0]=" 307 ";
+objData[3][1]=" 29 ";
+objData[3][2]=" 214 ";
+objData[3][3]=" 64 ";
+objData[3][4]=" 9.4 ";
+objData[3][5]=" 20.8 ";
+objData[3][6]=" 84 ";
+objData[3][7]=" 88 ";
+
+objName[4]="鹿畑町";
+objData[4][0]=" 761 ";
+objData[4][1]=" 125 ";
+objData[4][2]=" 421 ";
+objData[4][3]=" 215 ";
+objData[4][4]=" 16.4 ";
+objData[4][5]=" 28.3 ";
+objData[4][6]=" 19 ";
+objData[4][7]=" 59 ";
+
+objName[5]="鹿ノ台東１丁目";
+objData[5][0]=" 473 ";
+objData[5][1]=" 50 ";
+objData[5][2]=" 228 ";
+objData[5][3]=" 195 ";
+objData[5][4]=" 10.6 ";
+objData[5][5]=" 41.2 ";
+objData[5][6]=" 70 ";
+objData[5][7]=" 20 ";
+
+objName[6]="鹿ノ台東２丁目";
+objData[6][0]=" 636 ";
+objData[6][1]=" 58 ";
+objData[6][2]=" 278 ";
+objData[6][3]=" 300 ";
+objData[6][4]=" 9.1 ";
+objData[6][5]=" 47.2 ";
+objData[6][6]=" 87 ";
+objData[6][7]=" 4 ";
+
+objName[7]="鹿ノ台東３丁目";
+objData[7][0]=" 459 ";
+objData[7][1]=" 49 ";
+objData[7][2]=" 282 ";
+objData[7][3]=" 128 ";
+objData[7][4]=" 10.7 ";
+objData[7][5]=" 27.9 ";
+objData[7][6]=" 68 ";
+objData[7][7]=" 61 ";
+
+objName[8]="鹿ノ台西１丁目";
+objData[8][0]=" 764 ";
+objData[8][1]=" 121 ";
+objData[8][2]=" 430 ";
+objData[8][3]=" 213 ";
+objData[8][4]=" 15.8 ";
+objData[8][5]=" 27.9 ";
+objData[8][6]=" 20 ";
+objData[8][7]=" 62 ";
+
+objName[9]="鹿ノ台西２丁目";
+objData[9][0]=" 554 ";
+objData[9][1]=" 58 ";
+objData[9][2]=" 287 ";
+objData[9][3]=" 209 ";
+objData[9][4]=" 10.5 ";
+objData[9][5]=" 37.7 ";
+objData[9][6]=" 71 ";
+objData[9][7]=" 27 ";
+
+objName[10]="鹿ノ台西３丁目";
+objData[10][0]=" 915 ";
+objData[10][1]=" 89 ";
+objData[10][2]=" 438 ";
+objData[10][3]=" 388 ";
+objData[10][4]=" 9.7 ";
+objData[10][5]=" 42.4 ";
+objData[10][6]=" 80 ";
+objData[10][7]=" 15 ";
+
+objName[11]="鹿ノ台南１丁目";
+objData[11][0]=" 689 ";
+objData[11][1]=" 121 ";
+objData[11][2]=" 454 ";
+objData[11][3]=" 114 ";
+objData[11][4]=" 17.6 ";
+objData[11][5]=" 16.5 ";
+objData[11][6]=" 15 ";
+objData[11][7]=" 96 ";
+
+objName[12]="鹿ノ台南２丁目";
+objData[12][0]=" 933 ";
+objData[12][1]=" 91 ";
+objData[12][2]=" 449 ";
+objData[12][3]=" 393 ";
+objData[12][4]=" 9.8 ";
+objData[12][5]=" 42.1 ";
+objData[12][6]=" 79 ";
+objData[12][7]=" 16 ";
+
+objName[13]="鹿ノ台北１丁目";
+objData[13][0]=" 830 ";
+objData[13][1]=" 66 ";
+objData[13][2]=" 391 ";
+objData[13][3]=" 373 ";
+objData[13][4]=" 8 ";
+objData[13][5]=" 44.9 ";
+objData[13][6]=" 97 ";
+objData[13][7]=" 10 ";
+
+objName[14]="鹿ノ台北２丁目";
+objData[14][0]=" 382 ";
+objData[14][1]=" 25 ";
+objData[14][2]=" 177 ";
+objData[14][3]=" 180 ";
+objData[14][4]=" 6.5 ";
+objData[14][5]=" 47.1 ";
+objData[14][6]=" 106 ";
+objData[14][7]=" 5 ";
+
+objName[15]="鹿ノ台北３丁目";
+objData[15][0]=" 742 ";
+objData[15][1]=" 52 ";
+objData[15][2]=" 335 ";
+objData[15][3]=" 355 ";
+objData[15][4]=" 7 ";
+objData[15][5]=" 47.8 ";
+objData[15][6]=" 104 ";
+objData[15][7]=" 3 ";
+
+objName[16]="美鹿の台";
+objData[16][0]=" 1264 ";
+objData[16][1]=" 503 ";
+objData[16][2]=" 733 ";
+objData[16][3]=" 28 ";
+objData[16][4]=" 39.8 ";
+objData[16][5]=" 2.2 ";
+objData[16][6]=" 3 ";
+objData[16][7]=" 108 ";
+
+objName[17]="上町";
+objData[17][0]=" 1267 ";
+objData[17][1]=" 184 ";
+objData[17][2]=" 757 ";
+objData[17][3]=" 326 ";
+objData[17][4]=" 14.5 ";
+objData[17][5]=" 25.7 ";
+objData[17][6]=" 30 ";
+objData[17][7]=" 69 ";
+
+objName[18]="上町台";
+objData[18][0]=" 815 ";
+objData[18][1]=" 337 ";
+objData[18][2]=" 460 ";
+objData[18][3]=" 18 ";
+objData[18][4]=" 41.3 ";
+objData[18][5]=" 2.2 ";
+objData[18][6]=" 1 ";
+objData[18][7]=" 109 ";
+
+objName[19]="北大和１丁目";
+objData[19][0]=" 864 ";
+objData[19][1]=" 82 ";
+objData[19][2]=" 584 ";
+objData[19][3]=" 198 ";
+objData[19][4]=" 9.5 ";
+objData[19][5]=" 22.9 ";
+objData[19][6]=" 83 ";
+objData[19][7]=" 82 ";
+
+objName[20]="北大和２丁目";
+objData[20][0]=" 1273 ";
+objData[20][1]=" 169 ";
+objData[20][2]=" 793 ";
+objData[20][3]=" 311 ";
+objData[20][4]=" 13.3 ";
+objData[20][5]=" 24.4 ";
+objData[20][6]=" 40 ";
+objData[20][7]=" 77 ";
+
+objName[21]="北大和３丁目";
+objData[21][0]=" 402 ";
+objData[21][1]=" 41 ";
+objData[21][2]=" 285 ";
+objData[21][3]=" 76 ";
+objData[21][4]=" 10.2 ";
+objData[21][5]=" 18.9 ";
+objData[21][6]=" 74 ";
+objData[21][7]=" 94 ";
+
+objName[22]="北大和４丁目";
+objData[22][0]=" 624 ";
+objData[22][1]=" 68 ";
+objData[22][2]=" 405 ";
+objData[22][3]=" 151 ";
+objData[22][4]=" 10.9 ";
+objData[22][5]=" 24.2 ";
+objData[22][6]=" 65 ";
+objData[22][7]=" 78 ";
+
+objName[23]="北大和５丁目";
+objData[23][0]=" 513 ";
+objData[23][1]=" 102 ";
+objData[23][2]=" 340 ";
+objData[23][3]=" 71 ";
+objData[23][4]=" 19.9 ";
+objData[23][5]=" 13.8 ";
+objData[23][6]=" 10 ";
+objData[23][7]=" 99 ";
+
+objName[24]="真弓１丁目";
+objData[24][0]=" 814 ";
+objData[24][1]=" 115 ";
+objData[24][2]=" 402 ";
+objData[24][3]=" 297 ";
+objData[24][4]=" 14.1 ";
+objData[24][5]=" 36.5 ";
+objData[24][6]=" 33 ";
+objData[24][7]=" 32 ";
+
+objName[25]="真弓２丁目";
+objData[25][0]=" 671 ";
+objData[25][1]=" 65 ";
+objData[25][2]=" 299 ";
+objData[25][3]=" 307 ";
+objData[25][4]=" 9.7 ";
+objData[25][5]=" 45.8 ";
+objData[25][6]=" 82 ";
+objData[25][7]=" 8 ";
+
+objName[26]="真弓３丁目";
+objData[26][0]=" 649 ";
+objData[26][1]=" 66 ";
+objData[26][2]=" 317 ";
+objData[26][3]=" 266 ";
+objData[26][4]=" 10.2 ";
+objData[26][5]=" 41 ";
+objData[26][6]=" 75 ";
+objData[26][7]=" 23 ";
+
+objName[27]="真弓４丁目";
+objData[27][0]=" 715 ";
+objData[27][1]=" 55 ";
+objData[27][2]=" 339 ";
+objData[27][3]=" 321 ";
+objData[27][4]=" 7.7 ";
+objData[27][5]=" 44.9 ";
+objData[27][6]=" 98 ";
+objData[27][7]=" 11 ";
+
+objName[28]="真弓南１丁目";
+objData[28][0]=" 849 ";
+objData[28][1]=" 79 ";
+objData[28][2]=" 454 ";
+objData[28][3]=" 316 ";
+objData[28][4]=" 9.3 ";
+objData[28][5]=" 37.2 ";
+objData[28][6]=" 85 ";
+objData[28][7]=" 28 ";
+
+objName[29]="真弓南２丁目";
+objData[29][0]=" 503 ";
+objData[29][1]=" 38 ";
+objData[29][2]=" 288 ";
+objData[29][3]=" 177 ";
+objData[29][4]=" 7.6 ";
+objData[29][5]=" 35.2 ";
+objData[29][6]=" 99 ";
+objData[29][7]=" 37 ";
+
+objName[30]="あすか野北１丁目";
+objData[30][0]=" 1027 ";
+objData[30][1]=" 143 ";
+objData[30][2]=" 529 ";
+objData[30][3]=" 355 ";
+objData[30][4]=" 13.9 ";
+objData[30][5]=" 34.6 ";
+objData[30][6]=" 36 ";
+objData[30][7]=" 39 ";
+
+objName[31]="あすか野北２丁目";
+objData[31][0]=" 938 ";
+objData[31][1]=" 128 ";
+objData[31][2]=" 432 ";
+objData[31][3]=" 378 ";
+objData[31][4]=" 13.6 ";
+objData[31][5]=" 40.3 ";
+objData[31][6]=" 39 ";
+objData[31][7]=" 24 ";
+
+objName[32]="あすか野北３丁目";
+objData[32][0]=" 537 ";
+objData[32][1]=" 49 ";
+objData[32][2]=" 262 ";
+objData[32][3]=" 226 ";
+objData[32][4]=" 9.1 ";
+objData[32][5]=" 42.1 ";
+objData[32][6]=" 86 ";
+objData[32][7]=" 17 ";
+
+objName[33]="あすか野南１丁目";
+objData[33][0]=" 461 ";
+objData[33][1]=" 48 ";
+objData[33][2]=" 198 ";
+objData[33][3]=" 215 ";
+objData[33][4]=" 10.4 ";
+objData[33][5]=" 46.6 ";
+objData[33][6]=" 72 ";
+objData[33][7]=" 6 ";
+
+objName[34]="あすか野南２丁目";
+objData[34][0]=" 954 ";
+objData[34][1]=" 106 ";
+objData[34][2]=" 410 ";
+objData[34][3]=" 438 ";
+objData[34][4]=" 11.1 ";
+objData[34][5]=" 45.9 ";
+objData[34][6]=" 63 ";
+objData[34][7]=" 7 ";
+
+objName[35]="あすか野南３丁目";
+objData[35][0]=" 757 ";
+objData[35][1]=" 97 ";
+objData[35][2]=" 348 ";
+objData[35][3]=" 312 ";
+objData[35][4]=" 12.8 ";
+objData[35][5]=" 41.2 ";
+objData[35][6]=" 44 ";
+objData[35][7]=" 21 ";
+
+objName[36]="あすか台";
+objData[36][0]=" 269 ";
+objData[36][1]=" 34 ";
+objData[36][2]=" 152 ";
+objData[36][3]=" 83 ";
+objData[36][4]=" 12.6 ";
+objData[36][5]=" 30.9 ";
+objData[36][6]=" 46 ";
+objData[36][7]=" 52 ";
+
+objName[37]="白庭台１丁目";
+objData[37][0]=" 757 ";
+objData[37][1]=" 92 ";
+objData[37][2]=" 459 ";
+objData[37][3]=" 206 ";
+objData[37][4]=" 12.2 ";
+objData[37][5]=" 27.2 ";
+objData[37][6]=" 57 ";
+objData[37][7]=" 63 ";
+
+objName[38]="白庭台２丁目";
+objData[38][0]=" 540 ";
+objData[38][1]=" 58 ";
+objData[38][2]=" 341 ";
+objData[38][3]=" 141 ";
+objData[38][4]=" 10.7 ";
+objData[38][5]=" 26.1 ";
+objData[38][6]=" 67 ";
+objData[38][7]=" 68 ";
+
+objName[39]="白庭台３丁目";
+objData[39][0]=" 838 ";
+objData[39][1]=" 124 ";
+objData[39][2]=" 537 ";
+objData[39][3]=" 177 ";
+objData[39][4]=" 14.8 ";
+objData[39][5]=" 21.1 ";
+objData[39][6]=" 27 ";
+objData[39][7]=" 86 ";
+
+objName[40]="白庭台４丁目";
+objData[40][0]=" 1573 ";
+objData[40][1]=" 459 ";
+objData[40][2]=" 1010 ";
+objData[40][3]=" 104 ";
+objData[40][4]=" 29.2 ";
+objData[40][5]=" 6.6 ";
+objData[40][6]=" 8 ";
+objData[40][7]=" 104 ";
+
+objName[41]="白庭台５丁目";
+objData[41][0]=" 1501 ";
+objData[41][1]=" 452 ";
+objData[41][2]=" 905 ";
+objData[41][3]=" 144 ";
+objData[41][4]=" 30.1 ";
+objData[41][5]=" 9.6 ";
+objData[41][6]=" 7 ";
+objData[41][7]=" 102 ";
+
+objName[42]="白庭台６丁目";
+objData[42][0]=" 494 ";
+objData[42][1]=" 117 ";
+objData[42][2]=" 309 ";
+objData[42][3]=" 68 ";
+objData[42][4]=" 23.7 ";
+objData[42][5]=" 13.8 ";
+objData[42][6]=" 9 ";
+objData[42][7]=" 100 ";
+
+objName[43]="生駒台北";
+objData[43][0]=" 582 ";
+objData[43][1]=" 102 ";
+objData[43][2]=" 286 ";
+objData[43][3]=" 194 ";
+objData[43][4]=" 17.5 ";
+objData[43][5]=" 33.3 ";
+objData[43][6]=" 16 ";
+objData[43][7]=" 43 ";
+
+objName[44]="生駒台南";
+objData[44][0]=" 933 ";
+objData[44][1]=" 81 ";
+objData[44][2]=" 520 ";
+objData[44][3]=" 332 ";
+objData[44][4]=" 8.7 ";
+objData[44][5]=" 35.6 ";
+objData[44][6]=" 91 ";
+objData[44][7]=" 35 ";
+
+objName[45]="北田原町";
+objData[45][0]=" 556 ";
+objData[45][1]=" 47 ";
+objData[45][2]=" 303 ";
+objData[45][3]=" 206 ";
+objData[45][4]=" 8.5 ";
+objData[45][5]=" 37.1 ";
+objData[45][6]=" 93 ";
+objData[45][7]=" 29 ";
+
+objName[46]="小明町";
+objData[46][0]=" 4302 ";
+objData[46][1]=" 641 ";
+objData[46][2]=" 2663 ";
+objData[46][3]=" 998 ";
+objData[46][4]=" 14.9 ";
+objData[46][5]=" 23.2 ";
+objData[46][6]=" 23 ";
+objData[46][7]=" 80 ";
+
+objName[47]="新生駒台";
+objData[47][0]=" 765 ";
+objData[47][1]=" 76 ";
+objData[47][2]=" 409 ";
+objData[47][3]=" 280 ";
+objData[47][4]=" 9.9 ";
+objData[47][5]=" 36.6 ";
+objData[47][6]=" 78 ";
+objData[47][7]=" 31 ";
+
+objName[48]="西白庭台１丁目";
+objData[48][0]=" 1165 ";
+objData[48][1]=" 371 ";
+objData[48][2]=" 716 ";
+objData[48][3]=" 78 ";
+objData[48][4]=" 31.8 ";
+objData[48][5]=" 6.7 ";
+objData[48][6]=" 6 ";
+objData[48][7]=" 103 ";
+
+objName[49]="西白庭台２丁目";
+objData[49][0]=" 720 ";
+objData[49][1]=" 238 ";
+objData[49][2]=" 447 ";
+objData[49][3]=" 35 ";
+objData[49][4]=" 33.1 ";
+objData[49][5]=" 4.9 ";
+objData[49][6]=" 5 ";
+objData[49][7]=" 105 ";
+
+objName[50]="西白庭台３丁目";
+objData[50][0]=" 730 ";
+objData[50][1]=" 291 ";
+objData[50][2]=" 421 ";
+objData[50][3]=" 18 ";
+objData[50][4]=" 39.9 ";
+objData[50][5]=" 2.5 ";
+objData[50][6]=" 2 ";
+objData[50][7]=" 107 ";
+
+objName[51]="松美台";
+objData[51][0]=" 1911 ";
+objData[51][1]=" 237 ";
+objData[51][2]=" 1035 ";
+objData[51][3]=" 639 ";
+objData[51][4]=" 12.4 ";
+objData[51][5]=" 33.4 ";
+objData[51][6]=" 51 ";
+objData[51][7]=" 42 ";
+
+objName[52]="南田原町";
+objData[52][0]=" 2189 ";
+objData[52][1]=" 287 ";
+objData[52][2]=" 1224 ";
+objData[52][3]=" 678 ";
+objData[52][4]=" 13.1 ";
+objData[52][5]=" 31 ";
+objData[52][6]=" 41 ";
+objData[52][7]=" 51 ";
+
+objName[53]="喜里が丘１丁目";
+objData[53][0]=" 611 ";
+objData[53][1]=" 61 ";
+objData[53][2]=" 280 ";
+objData[53][3]=" 270 ";
+objData[53][4]=" 10 ";
+objData[53][5]=" 44.2 ";
+objData[53][6]=" 76 ";
+objData[53][7]=" 14 ";
+
+objName[54]="喜里が丘２丁目";
+objData[54][0]=" 440 ";
+objData[54][1]=" 66 ";
+objData[54][2]=" 266 ";
+objData[54][3]=" 108 ";
+objData[54][4]=" 15 ";
+objData[54][5]=" 24.5 ";
+objData[54][6]=" 22 ";
+objData[54][7]=" 74 ";
+
+objName[55]="喜里が丘３丁目";
+objData[55][0]=" 750 ";
+objData[55][1]=" 97 ";
+objData[55][2]=" 466 ";
+objData[55][3]=" 187 ";
+objData[55][4]=" 12.9 ";
+objData[55][5]=" 24.9 ";
+objData[55][6]=" 43 ";
+objData[55][7]=" 72 ";
+
+objName[56]="光陽台";
+objData[56][0]=" 500 ";
+objData[56][1]=" 37 ";
+objData[56][2]=" 214 ";
+objData[56][3]=" 249 ";
+objData[56][4]=" 7.4 ";
+objData[56][5]=" 49.8 ";
+objData[56][6]=" 101 ";
+objData[56][7]=" 1 ";
+
+objName[57]="俵口町";
+objData[57][0]=" 7517 ";
+objData[57][1]=" 1094 ";
+objData[57][2]=" 4929 ";
+objData[57][3]=" 1494 ";
+objData[57][4]=" 14.6 ";
+objData[57][5]=" 19.9 ";
+objData[57][6]=" 29 ";
+objData[57][7]=" 92 ";
+
+objName[58]="西松ヶ丘";
+objData[58][0]=" 2104 ";
+objData[58][1]=" 261 ";
+objData[58][2]=" 1271 ";
+objData[58][3]=" 572 ";
+objData[58][4]=" 12.4 ";
+objData[58][5]=" 27.2 ";
+objData[58][6]=" 50 ";
+objData[58][7]=" 64 ";
+
+objName[59]="東松ヶ丘";
+objData[59][0]=" 1388 ";
+objData[59][1]=" 169 ";
+objData[59][2]=" 888 ";
+objData[59][3]=" 331 ";
+objData[59][4]=" 12.2 ";
+objData[59][5]=" 23.8 ";
+objData[59][6]=" 56 ";
+objData[59][7]=" 79 ";
+
+objName[60]="桜ヶ丘";
+objData[60][0]=" 860 ";
+objData[60][1]=" 126 ";
+objData[60][2]=" 523 ";
+objData[60][3]=" 211 ";
+objData[60][4]=" 14.7 ";
+objData[60][5]=" 24.5 ";
+objData[60][6]=" 28 ";
+objData[60][7]=" 75 ";
+
+objName[61]="谷田町";
+objData[61][0]=" 1563 ";
+objData[61][1]=" 247 ";
+objData[61][2]=" 1000 ";
+objData[61][3]=" 316 ";
+objData[61][4]=" 15.8 ";
+objData[61][5]=" 20.2 ";
+objData[61][6]=" 21 ";
+objData[61][7]=" 90 ";
+
+objName[62]="辻町";
+objData[62][0]=" 5965 ";
+objData[62][1]=" 990 ";
+objData[62][2]=" 3725 ";
+objData[62][3]=" 1250 ";
+objData[62][4]=" 16.6 ";
+objData[62][5]=" 21 ";
+objData[62][6]=" 18 ";
+objData[62][7]=" 87 ";
+
+objName[63]="軽井沢町";
+objData[63][0]=" 641 ";
+objData[63][1]=" 73 ";
+objData[63][2]=" 349 ";
+objData[63][3]=" 219 ";
+objData[63][4]=" 11.4 ";
+objData[63][5]=" 34.2 ";
+objData[63][6]=" 59 ";
+objData[63][7]=" 41 ";
+
+objName[64]="北新町";
+objData[64][0]=" 2001 ";
+objData[64][1]=" 254 ";
+objData[64][2]=" 1179 ";
+objData[64][3]=" 568 ";
+objData[64][4]=" 12.7 ";
+objData[64][5]=" 28.4 ";
+objData[64][6]=" 45 ";
+objData[64][7]=" 58 ";
+
+objName[65]="新旭ヶ丘";
+objData[65][0]=" 802 ";
+objData[65][1]=" 100 ";
+objData[65][2]=" 426 ";
+objData[65][3]=" 276 ";
+objData[65][4]=" 12.5 ";
+objData[65][5]=" 34.4 ";
+objData[65][6]=" 49 ";
+objData[65][7]=" 40 ";
+
+objName[66]="仲之町";
+objData[66][0]=" 629 ";
+objData[66][1]=" 78 ";
+objData[66][2]=" 407 ";
+objData[66][3]=" 144 ";
+objData[66][4]=" 12.4 ";
+objData[66][5]=" 22.9 ";
+objData[66][6]=" 52 ";
+objData[66][7]=" 83 ";
+
+objName[67]="西旭ヶ丘";
+objData[67][0]=" 1205 ";
+objData[67][1]=" 125 ";
+objData[67][2]=" 733 ";
+objData[67][3]=" 347 ";
+objData[67][4]=" 10.4 ";
+objData[67][5]=" 28.8 ";
+objData[67][6]=" 73 ";
+objData[67][7]=" 56 ";
+
+objName[68]="東旭ヶ丘";
+objData[68][0]=" 1394 ";
+objData[68][1]=" 207 ";
+objData[68][2]=" 891 ";
+objData[68][3]=" 296 ";
+objData[68][4]=" 14.8 ";
+objData[68][5]=" 21.2 ";
+objData[68][6]=" 26 ";
+objData[68][7]=" 85 ";
+
+objName[69]="東新町";
+objData[69][0]=" 502 ";
+objData[69][1]=" 40 ";
+objData[69][2]=" 328 ";
+objData[69][3]=" 134 ";
+objData[69][4]=" 8 ";
+objData[69][5]=" 26.7 ";
+objData[69][6]=" 96 ";
+objData[69][7]=" 67 ";
+
+objName[70]="本町";
+objData[70][0]=" 507 ";
+objData[70][1]=" 36 ";
+objData[70][2]=" 288 ";
+objData[70][3]=" 183 ";
+objData[70][4]=" 7.1 ";
+objData[70][5]=" 36.1 ";
+objData[70][6]=" 103 ";
+objData[70][7]=" 34 ";
+
+objName[71]="元町１丁目";
+objData[71][0]=" 226 ";
+objData[71][1]=" 12 ";
+objData[71][2]=" 143 ";
+objData[71][3]=" 71 ";
+objData[71][4]=" 5.3 ";
+objData[71][5]=" 31.4 ";
+objData[71][6]=" 108 ";
+objData[71][7]=" 49 ";
+
+objName[72]="元町２丁目";
+objData[72][0]=" 753 ";
+objData[72][1]=" 138 ";
+objData[72][2]=" 464 ";
+objData[72][3]=" 151 ";
+objData[72][4]=" 18.3 ";
+objData[72][5]=" 20.1 ";
+objData[72][6]=" 13 ";
+objData[72][7]=" 91 ";
+
+objName[73]="門前町";
+objData[73][0]=" 834 ";
+objData[73][1]=" 58 ";
+objData[73][2]=" 474 ";
+objData[73][3]=" 302 ";
+objData[73][4]=" 7 ";
+objData[73][5]=" 36.2 ";
+objData[73][6]=" 105 ";
+objData[73][7]=" 33 ";
+
+objName[74]="山崎町";
+objData[74][0]=" 2401 ";
+objData[74][1]=" 303 ";
+objData[74][2]=" 1610 ";
+objData[74][3]=" 488 ";
+objData[74][4]=" 12.6 ";
+objData[74][5]=" 20.3 ";
+objData[74][6]=" 47 ";
+objData[74][7]=" 89 ";
+
+objName[75]="山崎新町";
+objData[75][0]=" 1222 ";
+objData[75][1]=" 122 ";
+objData[75][2]=" 739 ";
+objData[75][3]=" 361 ";
+objData[75][4]=" 10 ";
+objData[75][5]=" 29.5 ";
+objData[75][6]=" 76 ";
+objData[75][7]=" 55 ";
+
+objName[76]="中菜畑１丁目";
+objData[76][0]=" 528 ";
+objData[76][1]=" 59 ";
+objData[76][2]=" 302 ";
+objData[76][3]=" 167 ";
+objData[76][4]=" 11.2 ";
+objData[76][5]=" 31.6 ";
+objData[76][6]=" 61 ";
+objData[76][7]=" 48 ";
+
+objName[77]="中菜畑２丁目";
+objData[77][0]=" 1052 ";
+objData[77][1]=" 114 ";
+objData[77][2]=" 641 ";
+objData[77][3]=" 297 ";
+objData[77][4]=" 10.8 ";
+objData[77][5]=" 28.2 ";
+objData[77][6]=" 66 ";
+objData[77][7]=" 60 ";
+
+objName[78]="菜畑町";
+objData[78][0]=" 71 ";
+objData[78][1]=" 6 ";
+objData[78][2]=" 39 ";
+objData[78][3]=" 26 ";
+objData[78][4]=" 8.5 ";
+objData[78][5]=" 36.6 ";
+objData[78][6]=" 94 ";
+objData[78][7]=" 30 ";
+
+objName[79]="西菜畑町";
+objData[79][0]=" 519 ";
+objData[79][1]=" 46 ";
+objData[79][2]=" 312 ";
+objData[79][3]=" 161 ";
+objData[79][4]=" 8.9 ";
+objData[79][5]=" 31 ";
+objData[79][6]=" 89 ";
+objData[79][7]=" 50 ";
+
+objName[80]="東生駒１丁目";
+objData[80][0]=" 2613 ";
+objData[80][1]=" 366 ";
+objData[80][2]=" 1745 ";
+objData[80][3]=" 502 ";
+objData[80][4]=" 14 ";
+objData[80][5]=" 19.2 ";
+objData[80][6]=" 34 ";
+objData[80][7]=" 93 ";
+
+objName[81]="東生駒２丁目";
+objData[81][0]=" 471 ";
+objData[81][1]=" 35 ";
+objData[81][2]=" 257 ";
+objData[81][3]=" 179 ";
+objData[81][4]=" 7.4 ";
+objData[81][5]=" 38 ";
+objData[81][6]=" 100 ";
+objData[81][7]=" 26 ";
+
+objName[82]="東生駒３丁目";
+objData[82][0]=" 872 ";
+objData[82][1]=" 125 ";
+objData[82][2]=" 462 ";
+objData[82][3]=" 285 ";
+objData[82][4]=" 14.3 ";
+objData[82][5]=" 32.7 ";
+objData[82][6]=" 32 ";
+objData[82][7]=" 45 ";
+
+objName[83]="東生駒４丁目";
+objData[83][0]=" 642 ";
+objData[83][1]=" 84 ";
+objData[83][2]=" 332 ";
+objData[83][3]=" 226 ";
+objData[83][4]=" 13.1 ";
+objData[83][5]=" 35.2 ";
+objData[83][6]=" 42 ";
+objData[83][7]=" 36 ";
+
+objName[84]="東生駒月見町";
+objData[84][0]=" 1032 ";
+objData[84][1]=" 110 ";
+objData[84][2]=" 588 ";
+objData[84][3]=" 334 ";
+objData[84][4]=" 10.7 ";
+objData[84][5]=" 32.4 ";
+objData[84][6]=" 69 ";
+objData[84][7]=" 47 ";
+
+objName[85]="東菜畑１丁目";
+objData[85][0]=" 1173 ";
+objData[85][1]=" 221 ";
+objData[85][2]=" 803 ";
+objData[85][3]=" 149 ";
+objData[85][4]=" 18.8 ";
+objData[85][5]=" 12.7 ";
+objData[85][6]=" 12 ";
+objData[85][7]=" 101 ";
+
+objName[86]="東菜畑２丁目";
+objData[86][0]=" 1167 ";
+objData[86][1]=" 143 ";
+objData[86][2]=" 732 ";
+objData[86][3]=" 292 ";
+objData[86][4]=" 12.3 ";
+objData[86][5]=" 25 ";
+objData[86][6]=" 54 ";
+objData[86][7]=" 71 ";
+
+objName[87]="緑ヶ丘";
+objData[87][0]=" 1238 ";
+objData[87][1]=" 184 ";
+objData[87][2]=" 698 ";
+objData[87][3]=" 356 ";
+objData[87][4]=" 14.9 ";
+objData[87][5]=" 28.8 ";
+objData[87][6]=" 25 ";
+objData[87][7]=" 57 ";
+
+objName[88]="青山台";
+objData[88][0]=" 628 ";
+objData[88][1]=" 79 ";
+objData[88][2]=" 270 ";
+objData[88][3]=" 279 ";
+objData[88][4]=" 12.6 ";
+objData[88][5]=" 44.4 ";
+objData[88][6]=" 48 ";
+objData[88][7]=" 12 ";
+
+objName[89]="有里町";
+objData[89][0]=" 1709 ";
+objData[89][1]=" 211 ";
+objData[89][2]=" 987 ";
+objData[89][3]=" 511 ";
+objData[89][4]=" 12.3 ";
+objData[89][5]=" 29.9 ";
+objData[89][6]=" 53 ";
+objData[89][7]=" 54 ";
+
+objName[90]="小倉寺町";
+objData[90][0]=" 51 ";
+objData[90][1]=" 7 ";
+objData[90][2]=" 23 ";
+objData[90][3]=" 21 ";
+objData[90][4]=" 13.7 ";
+objData[90][5]=" 41.2 ";
+objData[90][6]=" 38 ";
+objData[90][7]=" 22 ";
+
+objName[91]="小瀬町";
+objData[91][0]=" 3185 ";
+objData[91][1]=" 461 ";
+objData[91][2]=" 1921 ";
+objData[91][3]=" 803 ";
+objData[91][4]=" 14.5 ";
+objData[91][5]=" 25.2 ";
+objData[91][6]=" 31 ";
+objData[91][7]=" 70 ";
+
+objName[92]="鬼取町";
+objData[92][0]=" 66 ";
+objData[92][1]=" 0 ";
+objData[92][2]=" 44 ";
+objData[92][3]=" 22 ";
+objData[92][4]=" 0 ";
+objData[92][5]=" 33.3 ";
+objData[92][6]=" 109 ";
+objData[92][7]=" 43 ";
+
+objName[93]="大門町";
+objData[93][0]=" 95 ";
+objData[93][1]=" 6 ";
+objData[93][2]=" 47 ";
+objData[93][3]=" 42 ";
+objData[93][4]=" 6.3 ";
+objData[93][5]=" 44.2 ";
+objData[93][6]=" 107 ";
+objData[93][7]=" 13 ";
+
+objName[94]="西畑町";
+objData[94][0]=" 70 ";
+objData[94][1]=" 6 ";
+objData[94][2]=" 35 ";
+objData[94][3]=" 29 ";
+objData[94][4]=" 8.6 ";
+objData[94][5]=" 41.4 ";
+objData[94][6]=" 92 ";
+objData[94][7]=" 19 ";
+
+objName[95]="萩原町";
+objData[95][0]=" 1298 ";
+objData[95][1]=" 193 ";
+objData[95][2]=" 807 ";
+objData[95][3]=" 298 ";
+objData[95][4]=" 14.9 ";
+objData[95][5]=" 23 ";
+objData[95][6]=" 24 ";
+objData[95][7]=" 81 ";
+
+objName[96]="藤尾町";
+objData[96][0]=" 83 ";
+objData[96][1]=" 14 ";
+objData[96][2]=" 37 ";
+objData[96][3]=" 32 ";
+objData[96][4]=" 16.9 ";
+objData[96][5]=" 38.6 ";
+objData[96][6]=" 17 ";
+objData[96][7]=" 25 ";
+
+objName[97]="壱分町";
+objData[97][0]=" 8097 ";
+objData[97][1]=" 1535 ";
+objData[97][2]=" 5112 ";
+objData[97][3]=" 1450 ";
+objData[97][4]=" 19 ";
+objData[97][5]=" 17.9 ";
+objData[97][6]=" 11 ";
+objData[97][7]=" 95 ";
+
+objName[98]="さつき台１丁目";
+objData[98][0]=" 1277 ";
+objData[98][1]=" 178 ";
+objData[98][2]=" 655 ";
+objData[98][3]=" 444 ";
+objData[98][4]=" 13.9 ";
+objData[98][5]=" 34.8 ";
+objData[98][6]=" 35 ";
+objData[98][7]=" 38 ";
+
+objName[99]="さつき台２丁目";
+objData[99][0]=" 1182 ";
+objData[99][1]=" 134 ";
+objData[99][2]=" 730 ";
+objData[99][3]=" 318 ";
+objData[99][4]=" 11.3 ";
+objData[99][5]=" 26.9 ";
+objData[99][6]=" 60 ";
+objData[99][7]=" 65 ";
+
+objName[100]="南山手台";
+objData[100][0]=" 721 ";
+objData[100][1]=" 248 ";
+objData[100][2]=" 441 ";
+objData[100][3]=" 32 ";
+objData[100][4]=" 34.4 ";
+objData[100][5]=" 4.4 ";
+objData[100][6]=" 4 ";
+objData[100][7]=" 106 ";
+
+objName[101]="乙田町";
+objData[101][0]="欠損値";
+objData[101][1]="欠損値";
+objData[101][2]="欠損値";
+objData[101][3]="欠損値";
+objData[101][4]="欠損値";
+objData[101][5]="欠損値";
+objData[101][6]="欠損値";
+objData[101][7]="欠損値";
+
+objName[102]="小平尾町";
+objData[102][0]=" 2506 ";
+objData[102][1]=" 279 ";
+objData[102][2]=" 1614 ";
+objData[102][3]=" 613 ";
+objData[102][4]=" 11.1 ";
+objData[102][5]=" 24.5 ";
+objData[102][6]=" 62 ";
+objData[102][7]=" 76 ";
+
+objName[103]="萩の台";
+objData[103][0]=" 838 ";
+objData[103][1]=" 152 ";
+objData[103][2]=" 497 ";
+objData[103][3]=" 189 ";
+objData[103][4]=" 18.1 ";
+objData[103][5]=" 22.6 ";
+objData[103][6]=" 14 ";
+objData[103][7]=" 84 ";
+
+objName[104]="萩の台１丁目";
+objData[104][0]=" 941 ";
+objData[104][1]=" 108 ";
+objData[104][2]=" 601 ";
+objData[104][3]=" 232 ";
+objData[104][4]=" 11.5 ";
+objData[104][5]=" 24.7 ";
+objData[104][6]=" 58 ";
+objData[104][7]=" 73 ";
+
+objName[105]="萩の台２丁目";
+objData[105][0]=" 298 ";
+objData[105][1]=" 24 ";
+objData[105][2]=" 150 ";
+objData[105][3]=" 124 ";
+objData[105][4]=" 8.1 ";
+objData[105][5]=" 41.6 ";
+objData[105][6]=" 95 ";
+objData[105][7]=" 18 ";
+
+objName[106]="萩の台３丁目";
+objData[106][0]=" 836 ";
+objData[106][1]=" 81 ";
+objData[106][2]=" 374 ";
+objData[106][3]=" 381 ";
+objData[106][4]=" 9.7 ";
+objData[106][5]=" 45.6 ";
+objData[106][6]=" 81 ";
+objData[106][7]=" 9 ";
+
+objName[107]="萩の台４丁目";
+objData[107][0]=" 498 ";
+objData[107][1]=" 36 ";
+objData[107][2]=" 216 ";
+objData[107][3]=" 246 ";
+objData[107][4]=" 7.2 ";
+objData[107][5]=" 49.4 ";
+objData[107][6]=" 102 ";
+objData[107][7]=" 2 ";
+
+objName[108]="萩の台５丁目";
+objData[108][0]=" 396 ";
+objData[108][1]=" 36 ";
+objData[108][2]=" 300 ";
+objData[108][3]=" 60 ";
+objData[108][4]=" 9.1 ";
+objData[108][5]=" 15.2 ";
+objData[108][6]=" 88 ";
+objData[108][7]=" 98 ";
+
+objName[109]="東山町";
+objData[109][0]=" 531 ";
+objData[109][1]=" 73 ";
+objData[109][2]=" 375 ";
+objData[109][3]=" 83 ";
+objData[109][4]=" 13.7 ";
+objData[109][5]=" 15.6 ";
+objData[109][6]=" 37 ";
+objData[109][7]=" 97 ";
+
+var new1,win1p;
+function CenterOpen () {
+if (win1p=="on") {
+if (new1.closed) {} else {new1.close();}
+}
+win1p = "on";
+new1=window.open("", "_blank", "resizable=1,scrollbars = yes,width=800,height=600");
+if(navigator.appVersion.charAt(0)>=3){new1.focus()};
+new1.document.clear();
+new1.document.write("<html><head><meta http-equiv=Content-Type content=\"text/html charset=x-sjis\"><title>View Window</title></head><body bgcolor=#FFFFFF>");
+new1.document.write("<STYLE TYPE=\"text/css\"><!--.table1 { border-collapse: collapse; border: 1px #1C79C6 solid;}"); 
+new1.document.write(".table1 TD { border: 1px #1C79C6 solid;}--></STYLE>"); 
+new1.document.write("<table CLASS='table1'>");
+new1.document.write("<tr><td></td>");
+for(n = 0; n <  DTNum ; ++n){
+new1.document.write("<td>" + DataTitle[n] + "</td>");
+}
+if(LinkNum != -1){
+for(n = 0; n < LinkNum; ++n){
+new1.document.write("<td>リンク</td>")
+}
+}
+new1.document.write("</tr>")
+new1.document.write("<tr><td></td>");
+for(n = 0; n <  DTNum ; ++n){
+new1.document.write("<td>" + DataUnit[n] + "</td>");
+}
+if(LinkNum != -1){
+for(n = 0; n < LinkNum; ++n){
+new1.document.write("<td></td>");
+}
+}
+for(i = 0; i <  ObJNum ; ++i){
+new1.document.write("<tr>");
+new1.document.write("<td>" + objName[i] + "</td>");
+for(n = 0; n <  DTNum ; ++n){
+new1.document.write("<td>" + objData[i][n] + "</td>");
+}
+if(LinkNum != -1){
+for(n = 0; n < LinkNum; ++n){
+if(objLinkAddress[i][n] != ""){
+new1.document.write("<td><a href = '" + objLinkAddress[i][n] + "' target='_blank'>" +objLinkName[i][n] + "</a></td>");
+}}
+}
+new1.document.write("</tr>");
+}
+new1.document.write("</table>");
+new1.document.write("<center><form><input type=button value='このウインドウを閉じる' onClick='window.close()'></form></center>");
+new1.document.write("</body></html>");
+new1.document.close();
+}
+function Msg(e,index){
+var MSGC;
+var x = e.x;
+var y = e.y;
+if(x == undefined){
+x = e.pageX;
+y = e.pageY;
+}
+if(index==-1){
+MSGC="" ;
+}else{
+MSGC="<TABLE border=0 bgcolor='#ffffcc'>"+ Set_Table(index) +"</TABLE>" ;
+}
+	box.innerHTML = MSGC;
+	box.style.left=document.body.scrollLeft+x+10;
+	box.style.top=document.body.scrollTop+y+10;
+}
+function Msg2(e,index){
+var MSGC;
+var x = e.x;
+var y = e.y;
+if(x == undefined){
+x = e.pageX;
+y = e.pageY;
+}
+if(index==-1){
+MSGC="" ;
+}else{
+Msg(e,-1);
+MSGC="<TABLE CLASS='table1' bgcolor='#ffffcc'>"+ Set_Table(index) +"<TR><TD ALIGN=CENTER><SMALL><A Href =\"#\" onClick=\"Msg2(event,-1)\">閉じる</A></SMALL></TD></TR></TABLE>"
+}
+	box2.innerHTML = MSGC;
+	box2.style.left=document.body.scrollLeft+x+10;
+	box2.style.top=document.body.scrollTop+y+10;
+}
+function Set_Table(index){
+var table_v;
+table_v = "<TR><TD>" + objName[index] + "</TD></TR>"
+table_v = table_v +"<TR><TD><SMALL>";
+for(n = 0; n < DTNum; ++n){
+table_v = table_v + DataTitle[n] + "： "+ objData[index][n] + DataUnit[n] +"<BR>";
+}
+if(LinkNum != -1){
+for(n = 0; n < LinkNum; ++n){
+if(objLinkAddress[index][n] != ""){
+table_v = table_v + "<a href = '" + objLinkAddress[index][n] + "' target='_blank'>" +objLinkName[index][n] + "</a><BR>"}
+}
+}
+table_v = table_v + "</SMALL></TD></TR>";
+return table_v;
+}
+//-->
+</SCRIPT>
+</HEAD>
+<BODY>
+<p>　災害は忘れた頃にやってくるといわれていますが、阪神淡路大震災（1995年）を初め、東日本大震災（2011年）、広島土砂災害（2014年）、今年になって熊本地震と、最近大きな災害が忘れないうちに頻繁に起こっているように感じます。
+<br>　生駒市は地形上傾斜地が極めて多い地域ですので、自分の住んでいる場所（地区）の危険性を事前に知っておくことで、地震や土砂災害などの被害を最小限に食い止めると共に防災意識の向上を図ることが求められます。
+<br>　そこで、GIS（地理情報システム）による防災情報や災害情報をマップで表現して提供します。ここでは、生駒市のオープンデータや国土交通省の国土数値情報などを用いて、生駒市の防災関連データをグーグルマップ上に落とし込んだので、地図の拡大縮小は自在で、閲覧者は目的の位置情報を容易に確認出来ると共に、地図上のオブジェクトをクリックすると対象のデータを見ることが出来ます。
+<br><br>　さあ、上のボタンをクリックして確認してみましょう。
+</p>
+<DIV id=box style="position: absolute"></DIV>
+<DIV id=box2 style="position: absolute"></DIV>
+<center>
+<IMG SRC=cyobetsu_jinko_map.png USEMAP="#mapdata" > 
+<form><input type=button value='データ一覧表示' onClick='CenterOpen()'></form>
+</center>
+<MAP NAME=mapdata>
+<!--高山町-->
+<AREA onMouseOver="Msg(event,0)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,0)" SHAPE=circle COORDS=248,146,7 >
+<!--ひかりが丘１丁目-->
+<AREA onMouseOver="Msg(event,1)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,1)" SHAPE=circle COORDS=212,199,7 >
+<!--ひかりが丘２丁目-->
+<AREA onMouseOver="Msg(event,2)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,2)" SHAPE=circle COORDS=217,202,7 >
+<!--ひかりが丘３丁目-->
+<AREA onMouseOver="Msg(event,3)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,3)" SHAPE=circle COORDS=218,193,7 >
+<!--鹿畑町-->
+<AREA onMouseOver="Msg(event,4)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,4)" SHAPE=circle COORDS=322,241,7 >
+<!--鹿ノ台東１丁目-->
+<AREA onMouseOver="Msg(event,5)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,5)" SHAPE=circle COORDS=344,233,7 >
+<!--鹿ノ台東２丁目-->
+<AREA onMouseOver="Msg(event,6)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,6)" SHAPE=circle COORDS=340,221,7 >
+<!--鹿ノ台東３丁目-->
+<AREA onMouseOver="Msg(event,7)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,7)" SHAPE=circle COORDS=344,215,7 >
+<!--鹿ノ台西１丁目-->
+<AREA onMouseOver="Msg(event,8)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,8)" SHAPE=circle COORDS=311,221,7 >
+<!--鹿ノ台西２丁目-->
+<AREA onMouseOver="Msg(event,9)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,9)" SHAPE=circle COORDS=319,216,7 >
+<!--鹿ノ台西３丁目-->
+<AREA onMouseOver="Msg(event,10)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,10)" SHAPE=circle COORDS=311,216,7 >
+<!--鹿ノ台南１丁目-->
+<AREA onMouseOver="Msg(event,11)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,11)" SHAPE=circle COORDS=337,239,7 >
+<!--鹿ノ台南２丁目-->
+<AREA onMouseOver="Msg(event,12)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,12)" SHAPE=circle COORDS=333,225,7 >
+<!--鹿ノ台北１丁目-->
+<AREA onMouseOver="Msg(event,13)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,13)" SHAPE=circle COORDS=335,212,7 >
+<!--鹿ノ台北２丁目-->
+<AREA onMouseOver="Msg(event,14)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,14)" SHAPE=circle COORDS=326,210,7 >
+<!--鹿ノ台北３丁目-->
+<AREA onMouseOver="Msg(event,15)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,15)" SHAPE=circle COORDS=325,203,7 >
+<!--美鹿の台-->
+<AREA onMouseOver="Msg(event,16)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,16)" SHAPE=circle COORDS=315,238,7 >
+<!--上町-->
+<AREA onMouseOver="Msg(event,17)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,17)" SHAPE=circle COORDS=247,279,7 >
+<!--上町台-->
+<AREA onMouseOver="Msg(event,18)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,18)" SHAPE=circle COORDS=215,249,7 >
+<!--北大和１丁目-->
+<AREA onMouseOver="Msg(event,19)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,19)" SHAPE=circle COORDS=259,263,7 >
+<!--北大和２丁目-->
+<AREA onMouseOver="Msg(event,20)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,20)" SHAPE=circle COORDS=266,261,7 >
+<!--北大和３丁目-->
+<AREA onMouseOver="Msg(event,21)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,21)" SHAPE=circle COORDS=280,268,7 >
+<!--北大和４丁目-->
+<AREA onMouseOver="Msg(event,22)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,22)" SHAPE=circle COORDS=264,253,7 >
+<!--北大和５丁目-->
+<AREA onMouseOver="Msg(event,23)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,23)" SHAPE=circle COORDS=281,258,7 >
+<!--真弓１丁目-->
+<AREA onMouseOver="Msg(event,24)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,24)" SHAPE=circle COORDS=251,270,7 >
+<!--真弓２丁目-->
+<AREA onMouseOver="Msg(event,25)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,25)" SHAPE=circle COORDS=262,271,7 >
+<!--真弓３丁目-->
+<AREA onMouseOver="Msg(event,26)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,26)" SHAPE=circle COORDS=279,274,7 >
+<!--真弓４丁目-->
+<AREA onMouseOver="Msg(event,27)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,27)" SHAPE=circle COORDS=282,281,7 >
+<!--真弓南１丁目-->
+<AREA onMouseOver="Msg(event,28)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,28)" SHAPE=circle COORDS=270,289,7 >
+<!--真弓南２丁目-->
+<AREA onMouseOver="Msg(event,29)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,29)" SHAPE=circle COORDS=277,292,7 >
+<!--あすか野北１丁目-->
+<AREA onMouseOver="Msg(event,30)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,30)" SHAPE=circle COORDS=224,297,7 >
+<!--あすか野北２丁目-->
+<AREA onMouseOver="Msg(event,31)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,31)" SHAPE=circle COORDS=218,305,7 >
+<!--あすか野北３丁目-->
+<AREA onMouseOver="Msg(event,32)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,32)" SHAPE=circle COORDS=215,298,7 >
+<!--あすか野南１丁目-->
+<AREA onMouseOver="Msg(event,33)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,33)" SHAPE=circle COORDS=233,314,7 >
+<!--あすか野南２丁目-->
+<AREA onMouseOver="Msg(event,34)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,34)" SHAPE=circle COORDS=224,313,7 >
+<!--あすか野南３丁目-->
+<AREA onMouseOver="Msg(event,35)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,35)" SHAPE=circle COORDS=238,321,7 >
+<!--あすか台-->
+<AREA onMouseOver="Msg(event,36)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,36)" SHAPE=circle COORDS=247,318,7 >
+<!--白庭台１丁目-->
+<AREA onMouseOver="Msg(event,37)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,37)" SHAPE=circle COORDS=202,255,7 >
+<!--白庭台２丁目-->
+<AREA onMouseOver="Msg(event,38)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,38)" SHAPE=circle COORDS=207,258,7 >
+<!--白庭台３丁目-->
+<AREA onMouseOver="Msg(event,39)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,39)" SHAPE=circle COORDS=213,266,7 >
+<!--白庭台４丁目-->
+<AREA onMouseOver="Msg(event,40)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,40)" SHAPE=circle COORDS=208,274,7 >
+<!--白庭台５丁目-->
+<AREA onMouseOver="Msg(event,41)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,41)" SHAPE=circle COORDS=211,290,7 >
+<!--白庭台６丁目-->
+<AREA onMouseOver="Msg(event,42)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,42)" SHAPE=circle COORDS=222,281,7 >
+<!--生駒台北-->
+<AREA onMouseOver="Msg(event,43)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,43)" SHAPE=circle COORDS=163,334,7 >
+<!--生駒台南-->
+<AREA onMouseOver="Msg(event,44)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,44)" SHAPE=circle COORDS=176,344,7 >
+<!--北田原町-->
+<AREA onMouseOver="Msg(event,45)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,45)" SHAPE=circle COORDS=207,194,7 >
+<!--小明町-->
+<AREA onMouseOver="Msg(event,46)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,46)" SHAPE=circle COORDS=190,322,7 >
+<!--新生駒台-->
+<AREA onMouseOver="Msg(event,47)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,47)" SHAPE=circle COORDS=169,319,7 >
+<!--西白庭台１丁目-->
+<AREA onMouseOver="Msg(event,48)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,48)" SHAPE=circle COORDS=190,254,7 >
+<!--西白庭台２丁目-->
+<AREA onMouseOver="Msg(event,49)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,49)" SHAPE=circle COORDS=188,247,7 >
+<!--西白庭台３丁目-->
+<AREA onMouseOver="Msg(event,50)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,50)" SHAPE=circle COORDS=194,243,7 >
+<!--松美台-->
+<AREA onMouseOver="Msg(event,51)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,51)" SHAPE=circle COORDS=160,318,7 >
+<!--南田原町-->
+<AREA onMouseOver="Msg(event,52)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,52)" SHAPE=circle COORDS=167,303,7 >
+<!--喜里が丘１丁目-->
+<AREA onMouseOver="Msg(event,53)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,53)" SHAPE=circle COORDS=142,317,7 >
+<!--喜里が丘２丁目-->
+<AREA onMouseOver="Msg(event,54)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,54)" SHAPE=circle COORDS=135,313,7 >
+<!--喜里が丘３丁目-->
+<AREA onMouseOver="Msg(event,55)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,55)" SHAPE=circle COORDS=135,331,7 >
+<!--光陽台-->
+<AREA onMouseOver="Msg(event,56)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,56)" SHAPE=circle COORDS=121,357,7 >
+<!--俵口町-->
+<AREA onMouseOver="Msg(event,57)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,57)" SHAPE=circle COORDS=151,317,7 >
+<!--西松ヶ丘-->
+<AREA onMouseOver="Msg(event,58)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,58)" SHAPE=circle COORDS=132,347,7 >
+<!--東松ヶ丘-->
+<AREA onMouseOver="Msg(event,59)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,59)" SHAPE=circle COORDS=158,364,7 >
+<!--桜ヶ丘-->
+<AREA onMouseOver="Msg(event,60)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,60)" SHAPE=circle COORDS=175,361,7 >
+<!--谷田町-->
+<AREA onMouseOver="Msg(event,61)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,61)" SHAPE=circle COORDS=173,368,7 >
+<!--辻町-->
+<AREA onMouseOver="Msg(event,62)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,62)" SHAPE=circle COORDS=184,376,7 >
+<!--軽井沢町-->
+<AREA onMouseOver="Msg(event,63)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,63)" SHAPE=circle COORDS=146,410,7 >
+<!--北新町-->
+<AREA onMouseOver="Msg(event,64)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,64)" SHAPE=circle COORDS=138,371,7 >
+<!--新旭ヶ丘-->
+<AREA onMouseOver="Msg(event,65)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,65)" SHAPE=circle COORDS=170,410,7 >
+<!--仲之町-->
+<AREA onMouseOver="Msg(event,66)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,66)" SHAPE=circle COORDS=137,403,7 >
+<!--西旭ヶ丘-->
+<AREA onMouseOver="Msg(event,67)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,67)" SHAPE=circle COORDS=155,401,7 >
+<!--東旭ヶ丘-->
+<AREA onMouseOver="Msg(event,68)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,68)" SHAPE=circle COORDS=165,393,7 >
+<!--東新町-->
+<AREA onMouseOver="Msg(event,69)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,69)" SHAPE=circle COORDS=169,385,7 >
+<!--本町-->
+<AREA onMouseOver="Msg(event,70)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,70)" SHAPE=circle COORDS=154,389,7 >
+<!--元町１丁目-->
+<AREA onMouseOver="Msg(event,71)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,71)" SHAPE=circle COORDS=154,383,7 >
+<!--元町２丁目-->
+<AREA onMouseOver="Msg(event,72)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,72)" SHAPE=circle COORDS=143,389,7 >
+<!--門前町-->
+<AREA onMouseOver="Msg(event,73)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,73)" SHAPE=circle COORDS=129,411,7 >
+<!--山崎町-->
+<AREA onMouseOver="Msg(event,74)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,74)" SHAPE=circle COORDS=179,394,7 >
+<!--山崎新町-->
+<AREA onMouseOver="Msg(event,75)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,75)" SHAPE=circle COORDS=150,398,7 >
+<!--中菜畑１丁目-->
+<AREA onMouseOver="Msg(event,76)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,76)" SHAPE=circle COORDS=190,411,7 >
+<!--中菜畑２丁目-->
+<AREA onMouseOver="Msg(event,77)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,77)" SHAPE=circle COORDS=183,426,7 >
+<!--菜畑町-->
+<AREA onMouseOver="Msg(event,78)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,78)" SHAPE=circle COORDS=135,440,7 >
+<!--西菜畑町-->
+<AREA onMouseOver="Msg(event,79)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,79)" SHAPE=circle COORDS=171,432,7 >
+<!--東生駒１丁目-->
+<AREA onMouseOver="Msg(event,80)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,80)" SHAPE=circle COORDS=193,403,7 >
+<!--東生駒２丁目-->
+<AREA onMouseOver="Msg(event,81)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,81)" SHAPE=circle COORDS=215,414,7 >
+<!--東生駒３丁目-->
+<AREA onMouseOver="Msg(event,82)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,82)" SHAPE=circle COORDS=216,424,7 >
+<!--東生駒４丁目-->
+<AREA onMouseOver="Msg(event,83)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,83)" SHAPE=circle COORDS=223,439,7 >
+<!--東生駒月見町-->
+<AREA onMouseOver="Msg(event,84)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,84)" SHAPE=circle COORDS=204,415,7 >
+<!--東菜畑１丁目-->
+<AREA onMouseOver="Msg(event,85)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,85)" SHAPE=circle COORDS=211,403,7 >
+<!--東菜畑２丁目-->
+<AREA onMouseOver="Msg(event,86)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,86)" SHAPE=circle COORDS=194,430,7 >
+<!--緑ヶ丘-->
+<AREA onMouseOver="Msg(event,87)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,87)" SHAPE=circle COORDS=167,417,7 >
+<!--青山台-->
+<AREA onMouseOver="Msg(event,88)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,88)" SHAPE=circle COORDS=166,479,7 >
+<!--有里町-->
+<AREA onMouseOver="Msg(event,89)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,89)" SHAPE=circle COORDS=185,473,7 >
+<!--小倉寺町-->
+<AREA onMouseOver="Msg(event,90)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,90)" SHAPE=circle COORDS=129,460,7 >
+<!--小瀬町-->
+<AREA onMouseOver="Msg(event,91)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,91)" SHAPE=circle COORDS=194,491,7 >
+<!--鬼取町-->
+<AREA onMouseOver="Msg(event,92)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,92)" SHAPE=circle COORDS=123,466,7 >
+<!--大門町-->
+<AREA onMouseOver="Msg(event,93)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,93)" SHAPE=circle COORDS=140,474,7 >
+<!--西畑町-->
+<AREA onMouseOver="Msg(event,94)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,94)" SHAPE=circle COORDS=68,487,7 >
+<!--萩原町-->
+<AREA onMouseOver="Msg(event,95)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,95)" SHAPE=circle COORDS=177,487,7 >
+<!--藤尾町-->
+<AREA onMouseOver="Msg(event,96)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,96)" SHAPE=circle COORDS=144,484,7 >
+<!--壱分町-->
+<AREA onMouseOver="Msg(event,97)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,97)" SHAPE=circle COORDS=171,453,7 >
+<!--さつき台１丁目-->
+<AREA onMouseOver="Msg(event,98)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,98)" SHAPE=circle COORDS=217,443,7 >
+<!--さつき台２丁目-->
+<AREA onMouseOver="Msg(event,99)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,99)" SHAPE=circle COORDS=225,451,7 >
+<!--南山手台-->
+<AREA onMouseOver="Msg(event,100)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,100)" SHAPE=circle COORDS=231,489,7 >
+<!--乙田町-->
+<AREA onMouseOver="Msg(event,101)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,101)" SHAPE=circle COORDS=216,545,7 >
+<!--小平尾町-->
+<AREA onMouseOver="Msg(event,102)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,102)" SHAPE=circle COORDS=175,497,7 >
+<!--萩の台-->
+<AREA onMouseOver="Msg(event,103)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,103)" SHAPE=circle COORDS=207,525,7 >
+<!--萩の台１丁目-->
+<AREA onMouseOver="Msg(event,104)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,104)" SHAPE=circle COORDS=195,522,7 >
+<!--萩の台２丁目-->
+<AREA onMouseOver="Msg(event,105)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,105)" SHAPE=circle COORDS=197,519,7 >
+<!--萩の台３丁目-->
+<AREA onMouseOver="Msg(event,106)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,106)" SHAPE=circle COORDS=204,525,7 >
+<!--萩の台４丁目-->
+<AREA onMouseOver="Msg(event,107)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,107)" SHAPE=circle COORDS=210,527,7 >
+<!--萩の台５丁目-->
+<AREA onMouseOver="Msg(event,108)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,108)" SHAPE=circle COORDS=206,535,7 >
+<!--東山町-->
+<AREA onMouseOver="Msg(event,109)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,109)" SHAPE=circle COORDS=198,543,7 >
+</MAP>
+</BODY>
+</HTML>

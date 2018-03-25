@@ -1,0 +1,1225 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+<STYLE TYPE="text/css">
+<!-- 
+.table1 { 
+border-collapse: collapse; 
+border: 1px #1C79C6 solid;
+} 
+-->
+</STYLE> 
+<SCRIPT language="JavaScript">
+<!--
+var DTNum =  15 ;
+var ObJNum =  55 ;
+var LinkNum = -1 ;
+DataTitle=new Array( 15 );
+DataUnit=new Array( 15 );
+
+objName=new Array( 55 );
+objData=new Array( 55 );
+objLinkName=new Array( 55 );
+objLinkAddress=new Array( 55 );
+for(n = 0; n <  55 ; ++n){
+objData[n] = new Array( 15 );
+}
+
+if(LinkNum != -1){
+for(n = 0; n < ObJNum ; ++n){
+objLinkName[n] = new Array(-1 );
+objLinkAddress[n] = new Array(-1 );
+}
+}
+
+DataTitle[0]="区別";
+DataTitle[1]="発生日時";
+DataTitle[2]="府県名";
+DataTitle[3]="市町村名";
+DataTitle[4]="番地";
+DataTitle[5]="F値";
+DataTitle[6]="被害域幅";
+DataTitle[7]="被害域長さ";
+DataTitle[8]="移動方向１";
+DataTitle[9]="X回転方向";
+DataTitle[10]="発生地点区別";
+DataTitle[11]="総観場１";
+DataTitle[12]="特徴";
+DataTitle[13]="発生位置緯度";
+DataTitle[14]="発生位置経度";
+
+DataUnit[0]="";
+DataUnit[1]="";
+DataUnit[2]="";
+DataUnit[3]="";
+DataUnit[4]="";
+DataUnit[5]="";
+DataUnit[6]="";
+DataUnit[7]="";
+DataUnit[8]="";
+DataUnit[9]="";
+DataUnit[10]="";
+DataUnit[11]="";
+DataUnit[12]="";
+DataUnit[13]="";
+DataUnit[14]="";
+
+objName[0]="1-70";
+objData[0][0]="竜巻";
+objData[0][1]="1973-01-19T11:45:00";
+objData[0][2]="三重県";
+objData[0][3]="菰野町";
+objData[0][4]="千草（奥郷地区）";
+objData[0][5]="F1";
+objData[0][6]="不明";
+objData[0][7]="不明";
+objData[0][8]="西南西";
+objData[0][9]="不明";
+objData[0][10]="陸上";
+objData[0][11]="季節風";
+objData[0][12]="当時の気象災害・異常気象報告には、ダンプカーが数台一緒に走るような音が確認されたとの談話が記録されている。";
+objData[0][13]=" 35.042222 ";
+objData[0][14]=" 136.4983333 ";
+
+objName[1]="1-99";
+objData[1][0]="竜巻";
+objData[1][1]="1975-08-22T14:30:00";
+objData[1][2]="三重県";
+objData[1][3]="熊野市";
+objData[1][4]="有馬町";
+objData[1][5]="F1";
+objData[1][6]="不明";
+objData[1][7]="不明";
+objData[1][8]="不明";
+objData[1][9]="不明";
+objData[1][10]="陸上";
+objData[1][11]="台風";
+objData[1][12]="熊野灘の方から北上。";
+objData[1][13]=" 33.875555 ";
+objData[1][14]=" 136.0861111 ";
+
+objName[2]="1-124";
+objData[2][0]="竜巻";
+objData[2][1]="1979-09-04T09:30:00";
+objData[2][2]="三重県";
+objData[2][3]="四日市";
+objData[2][4]="市桜地区";
+objData[2][5]="F1";
+objData[2][6]="100～250m";
+objData[2][7]="不明";
+objData[2][8]="北";
+objData[2][9]="不明";
+objData[2][10]="陸上";
+objData[2][11]="台風";
+objData[2][12]="東管技術調査によると、09時20分に四日市市桜地区で発生した竜巻が同市朝明町に10時00分にかけて北進した。その後、10時15分に桑名市付近に竜巻が発生し10時30分にかけて北北西進した。北部の大安町でも被害が発生しており、二つに分かれたのか複数個の竜巻が発生したのかは";
+objData[2][13]=" 34.980555 ";
+objData[2][14]=" 136.53 ";
+
+objName[3]="1-175";
+objData[3][0]="竜巻";
+objData[3][1]="1989-09-22T14:00:00";
+objData[3][2]="大阪府";
+objData[3][3]="泉南郡岬町";
+objData[3][4]="深日地区";
+objData[3][5]="F1";
+objData[3][6]="不明";
+objData[3][7]="不明";
+objData[3][8]="不明";
+objData[3][9]="不明";
+objData[3][10]="不明";
+objData[3][11]="寒冷前線";
+objData[3][12]="空白";
+objData[3][13]=" 34.316666 ";
+objData[3][14]=" 135.1333333 ";
+
+objName[4]="1-192";
+objData[4][0]="竜巻";
+objData[4][1]="1991-02-15T11:00:00";
+objData[4][2]="福井県";
+objData[4][3]="(湖上)";
+objData[4][4]="三方湖";
+objData[4][5]="F1";
+objData[4][6]="不明";
+objData[4][7]="不明";
+objData[4][8]="北";
+objData[4][9]="不明";
+objData[4][10]="水上(その後上陸)";
+objData[4][11]="二つ玉低気圧";
+objData[4][12]="空白";
+objData[4][13]=" 35.565 ";
+objData[4][14]=" 135.8813889 ";
+
+objName[5]="1-206";
+objData[5][0]="竜巻";
+objData[5][1]="1991-11-28T16:30:00";
+objData[5][2]="和歌山県";
+objData[5][3]="日置川町";
+objData[5][4]="日置川河口付近";
+objData[5][5]="F0～F1";
+objData[5][6]="50m";
+objData[5][7]="20km";
+objData[5][8]="東北東";
+objData[5][9]="不明";
+objData[5][10]="水上(その後上陸)";
+objData[5][11]="南岸低気圧";
+objData[5][12]="空白";
+objData[5][13]=" 33.558333 ";
+objData[5][14]=" 135.4472222 ";
+
+objName[6]="1-241";
+objData[6][0]="竜巻";
+objData[6][1]="1993-01-07T10:30:00";
+objData[6][2]="和歌山県";
+objData[6][3]="印南町";
+objData[6][4]="切目";
+objData[6][5]="不明";
+objData[6][6]="不明";
+objData[6][7]="不明";
+objData[6][8]="不明";
+objData[6][9]="不明";
+objData[6][10]="陸上";
+objData[6][11]="南岸低気圧";
+objData[6][12]="空白";
+objData[6][13]=" 33.797222 ";
+objData[6][14]=" 135.2416667 ";
+
+objName[7]="1-278";
+objData[7][0]="その他(不明を含む)";
+objData[7][1]="1994-05-08T15:10:00";
+objData[7][2]="京都府";
+objData[7][3]="京都市";
+objData[7][4]="右京区新明町";
+objData[7][5]="不明";
+objData[7][6]="不明";
+objData[7][7]="不明";
+objData[7][8]="空白";
+objData[7][9]="不明";
+objData[7][10]="陸上";
+objData[7][11]="雷雨(熱雷)";
+objData[7][12]="空白";
+objData[7][13]=" 34.993333 ";
+objData[7][14]=" 135.7138889 ";
+
+objName[8]="1-287";
+objData[8][0]="ダウンバースト";
+objData[8][1]="1994-09-19T04:30:00";
+objData[8][2]="和歌山県";
+objData[8][3]="南部町";
+objData[8][4]="柴";
+objData[8][5]="F0～F1";
+objData[8][6]="100m";
+objData[8][7]="12km";
+objData[8][8]="不明";
+objData[8][9]="空白";
+objData[8][10]="陸上";
+objData[8][11]="寒気の移流";
+objData[8][12]="空白";
+objData[8][13]=" 33.766666 ";
+objData[8][14]=" 135.3277778 ";
+
+objName[9]="1-322";
+objData[9][0]="その他(不明を含む)";
+objData[9][1]="1996-04-18T02:10:00";
+objData[9][2]="和歌山県";
+objData[9][3]="すさみ町";
+objData[9][4]="長井";
+objData[9][5]="F0";
+objData[9][6]="30m";
+objData[9][7]="1km";
+objData[9][8]="不明";
+objData[9][9]="空白";
+objData[9][10]="陸上";
+objData[9][11]="日本海低気圧";
+objData[9][12]="空白";
+objData[9][13]=" 33.516666 ";
+objData[9][14]=" 135.575 ";
+
+objName[10]="1-325";
+objData[10][0]="その他(不明を含む)";
+objData[10][1]="1996-06-18T17:30:00";
+objData[10][2]="三重県";
+objData[10][3]="四日市";
+objData[10][4]="市霞地区";
+objData[10][5]="不明";
+objData[10][6]="不明";
+objData[10][7]="不明";
+objData[10][8]="空白";
+objData[10][9]="空白";
+objData[10][10]="陸上";
+objData[10][11]="日本海低気圧";
+objData[10][12]="強い雨に雷を伴い、ひょうの目撃があった。";
+objData[10][13]=" 34.982222 ";
+objData[10][14]=" 136.6663889 ";
+
+objName[11]="1-391";
+objData[11][0]="竜巻";
+objData[11][1]="1998-09-24T15:00:00";
+objData[11][2]="京都府";
+objData[11][3]="久美浜町";
+objData[11][4]="空白";
+objData[11][5]="不明";
+objData[11][6]="不明";
+objData[11][7]="不明";
+objData[11][8]="不明";
+objData[11][9]="不明";
+objData[11][10]="不明";
+objData[11][11]="停滞前線";
+objData[11][12]="空白";
+objData[11][13]=" 35.640555 ";
+objData[11][14]=" 134.9252778 ";
+
+objName[12]="1-413";
+objData[12][0]="その他(不明を含む)";
+objData[12][1]="1999-09-15T11:00:00";
+objData[12][2]="京都府";
+objData[12][3]="京都市";
+objData[12][4]="伏見区向島善阿弥町、庚申町";
+objData[12][5]="F0";
+objData[12][6]="100m";
+objData[12][7]="4km";
+objData[12][8]="空白";
+objData[12][9]="不明";
+objData[12][10]="陸上";
+objData[12][11]="台風";
+objData[12][12]="空白";
+objData[12][13]=" 34.923055 ";
+objData[12][14]=" 135.7711111 ";
+
+objName[13]="1-414";
+objData[13][0]="その他(不明を含む)";
+objData[13][1]="1999-09-15T12:10:00";
+objData[13][2]="滋賀県";
+objData[13][3]="犬上郡甲良町";
+objData[13][4]="北落";
+objData[13][5]="F1";
+objData[13][6]="不明";
+objData[13][7]="26km";
+objData[13][8]="不明";
+objData[13][9]="不明";
+objData[13][10]="陸上";
+objData[13][11]="台風";
+objData[13][12]="空白";
+objData[13][13]=" 35.206666 ";
+objData[13][14]=" 136.2686111 ";
+
+objName[14]="1-437";
+objData[14][0]="その他(不明を含む)";
+objData[14][1]="1999-12-20T18:40:00";
+objData[14][2]="福井県";
+objData[14][3]="坂井郡三国町";
+objData[14][4]="安島";
+objData[14][5]="不明";
+objData[14][6]="20m";
+objData[14][7]="1～2km";
+objData[14][8]="不明";
+objData[14][9]="不明";
+objData[14][10]="不明";
+objData[14][11]="日本海低気圧";
+objData[14][12]="空白";
+objData[14][13]=" 36.249166 ";
+objData[14][14]=" 136.1244444 ";
+
+objName[15]="1-443";
+objData[15][0]="竜巻";
+objData[15][1]="2000-07-25T06:20:00";
+objData[15][2]="福井県";
+objData[15][3]="福井市";
+objData[15][4]="浜住町";
+objData[15][5]="不明";
+objData[15][6]="100m";
+objData[15][7]="不明";
+objData[15][8]="北東";
+objData[15][9]="低気圧性(反時計回り)";
+objData[15][10]="不明";
+objData[15][11]="停滞前線";
+objData[15][12]="空白";
+objData[15][13]=" 36.133611 ";
+objData[15][14]=" 136.0702778 ";
+
+objName[16]="1-449";
+objData[16][0]="竜巻";
+objData[16][1]="2000-09-11T08:10:00";
+objData[16][2]="和歌山県";
+objData[16][3]="新宮市";
+objData[16][4]="佐野";
+objData[16][5]="F0～F1";
+objData[16][6]="20～100m";
+objData[16][7]="10km";
+objData[16][8]="北西";
+objData[16][9]="不明";
+objData[16][10]="陸上";
+objData[16][11]="台風";
+objData[16][12]="ゴーと黒い固まりが回転しながら新官商高の方へ動いて行った。空にあるはずの雲が地面付近を通つて行った。";
+objData[16][13]=" 33.675833 ";
+objData[16][14]=" 135.9730556 ";
+
+objName[17]="1-465";
+objData[17][0]="竜巻";
+objData[17][1]="2001-06-19T14:50:00";
+objData[17][2]="福井県";
+objData[17][3]="敦賀市";
+objData[17][4]="若葉町";
+objData[17][5]="F1";
+objData[17][6]="不明";
+objData[17][7]="不明";
+objData[17][8]="東";
+objData[17][9]="不明";
+objData[17][10]="陸上";
+objData[17][11]="日本海低気圧";
+objData[17][12]="被害地域は東西2kmの帯状に発生、隣接する家屋でも被害程度に差があった、2tトラックが浮き上がり横転、レーダーで非常に発達したエコーを観測、ゴーという爆音のような音を聞いている、白い雲状のものを見ている。";
+objData[17][13]=" 35.632777 ";
+objData[17][14]=" 136.0530556 ";
+
+objName[18]="1-473";
+objData[18][0]="ダウンバースト";
+objData[18][1]="2001-07-17T16:10:00";
+objData[18][2]="滋賀県";
+objData[18][3]="愛知郡愛知川町";
+objData[18][4]="市";
+objData[18][5]="F0～F1";
+objData[18][6]="100～200m";
+objData[18][7]="60km";
+objData[18][8]="不明";
+objData[18][9]="不明";
+objData[18][10]="陸上";
+objData[18][11]="雷雨(熱雷)";
+objData[18][12]="突風の被害痕跡の特徴は、愛知川町南清水の一部を除き、放射状ではなくほぼ北方向へ一定方向に指向性を持ち、屋根瓦が棟の北側に面した風下側の瓦のみがはがされていた。また、神社の大木が根こそぎ北向きに倒れていた。農作物が地面に押し付けられるように北側に倒れていた";
+objData[18][13]=" 35.168888 ";
+objData[18][14]=" 136.215 ";
+
+objName[19]="1-475";
+objData[19][0]="その他(不明を含む)";
+objData[19][1]="2001-07-19T12:10:00";
+objData[19][2]="三重県";
+objData[19][3]="川越町";
+objData[19][4]="亀崎新田";
+objData[19][5]="不明";
+objData[19][6]="不明";
+objData[19][7]="不明";
+objData[19][8]="空白";
+objData[19][9]="空白";
+objData[19][10]="陸上";
+objData[19][11]="停滞前線";
+objData[19][12]="空白";
+objData[19][13]=" 35.020555 ";
+objData[19][14]=" 136.6936111 ";
+
+objName[20]="1-487";
+objData[20][0]="その他(不明を含む)";
+objData[20][1]="2002-01-11T10:20:00";
+objData[20][2]="福井県";
+objData[20][3]="坂井郡春江町";
+objData[20][4]="姫王";
+objData[20][5]="不明";
+objData[20][6]="不明";
+objData[20][7]="不明";
+objData[20][8]="不明";
+objData[20][9]="不明";
+objData[20][10]="不明";
+objData[20][11]="寒冷前線";
+objData[20][12]="空白";
+objData[20][13]=" 36.153611 ";
+objData[20][14]=" 136.175 ";
+
+objName[21]="1-493";
+objData[21][0]="竜巻";
+objData[21][1]="2002-07-16T16:40:00";
+objData[21][2]="京都府";
+objData[21][3]="亀岡市";
+objData[21][4]="千代川町小林、宮前町";
+objData[21][5]="F0";
+objData[21][6]="100m";
+objData[21][7]="不明";
+objData[21][8]="南東";
+objData[21][9]="不明";
+objData[21][10]="陸上";
+objData[21][11]="雷雨(熱雷)";
+objData[21][12]="空白";
+objData[21][13]=" 35.041666 ";
+objData[21][14]=" 135.5480556 ";
+
+objName[22]="1-494";
+objData[22][0]="ダウンバースト";
+objData[22][1]="2002-07-17T03:40:00";
+objData[22][2]="兵庫県";
+objData[22][3]="篠山市";
+objData[22][4]="大山下";
+objData[22][5]="F1";
+objData[22][6]="不明";
+objData[22][7]="2～5km";
+objData[22][8]="空白";
+objData[22][9]="不明";
+objData[22][10]="陸上";
+objData[22][11]="日本海低気圧";
+objData[22][12]="空白";
+objData[22][13]=" 35.081666 ";
+objData[22][14]=" 135.16 ";
+
+objName[23]="1-500";
+objData[23][0]="その他(不明を含む)";
+objData[23][1]="2002-09-01T15:05:00";
+objData[23][2]="福井県";
+objData[23][3]="今立郡今立町";
+objData[23][4]="藤木１２－１１";
+objData[23][5]="不明";
+objData[23][6]="不明";
+objData[23][7]="不明";
+objData[23][8]="不明";
+objData[23][9]="不明";
+objData[23][10]="不明";
+objData[23][11]="台風";
+objData[23][12]="空白";
+objData[23][13]=" 35.935277 ";
+objData[23][14]=" 136.265 ";
+
+objName[24]="1-510";
+objData[24][0]="ダウンバースト";
+objData[24][1]="2002-10-15T16:10:00";
+objData[24][2]="福井県";
+objData[24][3]="丹生郡織田町";
+objData[24][4]="空白";
+objData[24][5]="F0～F1";
+objData[24][6]="60m";
+objData[24][7]="40km";
+objData[24][8]="不明";
+objData[24][9]="不明";
+objData[24][10]="陸上";
+objData[24][11]="寒冷前線";
+objData[24][12]="ガストフロントに伴うマイクロバースト";
+objData[24][13]=" 35.960833 ";
+objData[24][14]=" 136.0561111 ";
+
+objName[25]="1-521";
+objData[25][0]="その他(不明を含む)";
+objData[25][1]="2002-12-11T03:30:00";
+objData[25][2]="福井県";
+objData[25][3]="南条郡河野村";
+objData[25][4]="王子根";
+objData[25][5]="不明";
+objData[25][6]="不明";
+objData[25][7]="不明";
+objData[25][8]="不明";
+objData[25][9]="不明";
+objData[25][10]="不明";
+objData[25][11]="寒気の移流";
+objData[25][12]="空白";
+objData[25][13]=" 35.824166 ";
+objData[25][14]=" 136.0708333 ";
+
+objName[26]="1-566";
+objData[26][0]="その他(不明を含む)";
+objData[26][1]="2004-07-09T17:10:00";
+objData[26][2]="大阪府";
+objData[26][3]="堺市";
+objData[26][4]="三原台２丁";
+objData[26][5]="不明";
+objData[26][6]="不明";
+objData[26][7]="不明";
+objData[26][8]="空白";
+objData[26][9]="空白";
+objData[26][10]="陸上";
+objData[26][11]="雷雨(熱雷)";
+objData[26][12]="空白";
+objData[26][13]=" 34.502777 ";
+objData[26][14]=" 135.5144444 ";
+
+objName[27]="1-567";
+objData[27][0]="その他(不明を含む)";
+objData[27][1]="2004-07-09T18:15:00";
+objData[27][2]="福井県";
+objData[27][3]="勝山市";
+objData[27][4]="荒土町伊波";
+objData[27][5]="不明";
+objData[27][6]="不明";
+objData[27][7]="不明";
+objData[27][8]="不明";
+objData[27][9]="不明";
+objData[27][10]="不明";
+objData[27][11]="雷雨(熱雷)";
+objData[27][12]="空白";
+objData[27][13]=" 36.079722 ";
+objData[27][14]=" 136.4663889 ";
+
+objName[28]="1-575";
+objData[28][0]="塵旋風(つむじ風を含む)";
+objData[28][1]="2004-08-03T10:30:00";
+objData[28][2]="兵庫県";
+objData[28][3]="西宮市";
+objData[28][4]="鳴尾浜１";
+objData[28][5]="F0";
+objData[28][6]="0m";
+objData[28][7]="0km";
+objData[28][8]="空白";
+objData[28][9]="不明";
+objData[28][10]="陸上";
+objData[28][11]="その他(高気圧)";
+objData[28][12]="空白";
+objData[28][13]=" 34.698888 ";
+objData[28][14]=" 135.3686111 ";
+
+objName[29]="1-593";
+objData[29][0]="その他(不明を含む)";
+objData[29][1]="2004-11-11T14:30:00";
+objData[29][2]="和歌山県";
+objData[29][3]="御坊市";
+objData[29][4]="名田町";
+objData[29][5]="F0";
+objData[29][6]="不明";
+objData[29][7]="不明";
+objData[29][8]="不明";
+objData[29][9]="空白";
+objData[29][10]="陸上";
+objData[29][11]="日本海低気圧";
+objData[29][12]="空白";
+objData[29][13]=" 33.834722 ";
+objData[29][14]=" 135.1775 ";
+
+objName[30]="1-602";
+objData[30][0]="ダウンバースト";
+objData[30][1]="2005-06-04T17:45:00";
+objData[30][2]="大阪府";
+objData[30][3]="豊中市";
+objData[30][4]="大阪空港";
+objData[30][5]="F0";
+objData[30][6]="不明";
+objData[30][7]="不明";
+objData[30][8]="空白";
+objData[30][9]="空白";
+objData[30][10]="陸上";
+objData[30][11]="寒気の移流";
+objData[30][12]="空港周辺にはスーパーセルを伴った雷雲があり、降雹があったことが目撃されている。吹き出しの水平スケールは目視で約1.5ｋｍと推定されている。";
+objData[30][13]=" 34.785277 ";
+objData[30][14]=" 135.4413889 ";
+
+objName[31]="1-681";
+objData[31][0]="その他(不明を含む)";
+objData[31][1]="2006-11-26T22:00:00";
+objData[31][2]="和歌山県";
+objData[31][3]="白浜町";
+objData[31][4]="湯崎";
+objData[31][5]="F0";
+objData[31][6]="不明";
+objData[31][7]="不明";
+objData[31][8]="不明";
+objData[31][9]="空白";
+objData[31][10]="陸上";
+objData[31][11]="南岸低気圧";
+objData[31][12]="空白";
+objData[31][13]=" 33.676111 ";
+objData[31][14]=" 135.3411111 ";
+
+objName[32]="1-684";
+objData[32][0]="竜巻";
+objData[32][1]="2007-02-14T15:40:00";
+objData[32][2]="和歌山県";
+objData[32][3]="日高郡印南町";
+objData[32][4]="津井262";
+objData[32][5]="F1";
+objData[32][6]="200m";
+objData[32][7]="10km";
+objData[32][8]="北東";
+objData[32][9]="不明";
+objData[32][10]="陸上";
+objData[32][11]="日本海低気圧";
+objData[32][12]="空白";
+objData[32][13]=" 33.814722 ";
+objData[32][14]=" 135.2022222 ";
+
+objName[33]="1-686";
+objData[33][0]="その他(不明を含む)";
+objData[33][1]="2007-02-14T15:40:00";
+objData[33][2]="和歌山県";
+objData[33][3]="日高郡印南町";
+objData[33][4]="山口";
+objData[33][5]="不明";
+objData[33][6]="300～400m";
+objData[33][7]="3～4km";
+objData[33][8]="不明";
+objData[33][9]="空白";
+objData[33][10]="陸上";
+objData[33][11]="日本海低気圧";
+objData[33][12]="空白";
+objData[33][13]=" 33.829722 ";
+objData[33][14]=" 135.2263889 ";
+
+objName[34]="1-706";
+objData[34][0]="その他(不明を含む)";
+objData[34][1]="2007-05-13T14:30:00";
+objData[34][2]="兵庫県";
+objData[34][3]="新温泉町";
+objData[34][4]="空白";
+objData[34][5]="不明";
+objData[34][6]="5～50m";
+objData[34][7]="不明";
+objData[34][8]="空白";
+objData[34][9]="空白";
+objData[34][10]="陸上";
+objData[34][11]="移動性高気圧";
+objData[34][12]="空白";
+objData[34][13]=" 35.530555 ";
+objData[34][14]=" 134.4858333 ";
+
+objName[35]="1-710";
+objData[35][0]="ダウンバースト";
+objData[35][1]="2007-07-12T09:40:00";
+objData[35][2]="滋賀県";
+objData[35][3]="彦根市";
+objData[35][4]="甘呂町、日夏町、蓮台寺町";
+objData[35][5]="F0";
+objData[35][6]="1800m";
+objData[35][7]="20km";
+objData[35][8]="空白";
+objData[35][9]="空白";
+objData[35][10]="陸上";
+objData[35][11]="梅雨前線";
+objData[35][12]="現地調査からみた被害のあった場所での風向は一様方向であった。";
+objData[35][13]=" 35.241944 ";
+objData[35][14]=" 136.2041667 ";
+
+objName[36]="1-719";
+objData[36][0]="その他(不明を含む)";
+objData[36][1]="2007-08-20T16:50:00";
+objData[36][2]="京都府";
+objData[36][3]="京都市";
+objData[36][4]="右京区京北下弓削町沢ノ奥15";
+objData[36][5]="F0";
+objData[36][6]="不明";
+objData[36][7]="不明";
+objData[36][8]="空白";
+objData[36][9]="不明";
+objData[36][10]="陸上";
+objData[36][11]="雷雨(熱雷)";
+objData[36][12]="空白";
+objData[36][13]=" 35.047222 ";
+objData[36][14]=" 135.7844444 ";
+
+objName[37]="1-828";
+objData[37][0]="ダウンバーストまたはガスト";
+objData[37][1]="2008-07-28T14:50:00";
+objData[37][2]="兵庫県";
+objData[37][3]="神戸市";
+objData[37][4]="西区平野町";
+objData[37][5]="F0以下";
+objData[37][6]="600m";
+objData[37][7]="3km";
+objData[37][8]="空白";
+objData[37][9]="空白";
+objData[37][10]="陸上";
+objData[37][11]="停滞前線";
+objData[37][12]="空白";
+objData[37][13]=" 34.691944 ";
+objData[37][14]=" 134.9644444 ";
+
+objName[38]="1-968";
+objData[38][0]="竜巻";
+objData[38][1]="2009-06-18T14:29:00";
+objData[38][2]="滋賀県";
+objData[38][3]="愛知郡愛荘町";
+objData[38][4]="南野々目付近";
+objData[38][5]="F0以下";
+objData[38][6]="不明";
+objData[38][7]="不明";
+objData[38][8]="北西";
+objData[38][9]="低気圧性(反時計回り)";
+objData[38][10]="陸上";
+objData[38][11]="寒気の移流";
+objData[38][12]="空白";
+objData[38][13]=" 35.166111 ";
+objData[38][14]=" 136.2219444 ";
+
+objName[39]="1-985";
+objData[39][0]="その他(不明を含む)";
+objData[39][1]="2009-07-26T09:37:00";
+objData[39][2]="兵庫県";
+objData[39][3]="丹波市";
+objData[39][4]="青垣町";
+objData[39][5]="F0";
+objData[39][6]="500m";
+objData[39][7]="9km";
+objData[39][8]="空白";
+objData[39][9]="空白";
+objData[39][10]="陸上";
+objData[39][11]="梅雨前線";
+objData[39][12]="空白";
+objData[39][13]=" 35.250277 ";
+objData[39][14]=" 134.9983333 ";
+
+objName[40]="1-991";
+objData[40][0]="ダウンバースト";
+objData[40][1]="2009-08-01T11:15:00";
+objData[40][2]="京都府";
+objData[40][3]="宇治市";
+objData[40][4]="木幡";
+objData[40][5]="F0";
+objData[40][6]="1900m";
+objData[40][7]="31km";
+objData[40][8]="空白";
+objData[40][9]="空白";
+objData[40][10]="陸上";
+objData[40][11]="寒気の移流";
+objData[40][12]="空白";
+objData[40][13]=" 34.921666 ";
+objData[40][14]=" 135.7994444 ";
+
+objName[41]="1-1056";
+objData[41][0]="竜巻";
+objData[41][1]="2010-07-09T14:40:00";
+objData[41][2]="和歌山県";
+objData[41][3]="東牟婁郡那智勝浦町";
+objData[41][4]="市屋";
+objData[41][5]="F0";
+objData[41][6]="100m";
+objData[41][7]="3km";
+objData[41][8]="北東";
+objData[41][9]="不明";
+objData[41][10]="陸上";
+objData[41][11]="梅雨前線";
+objData[41][12]="空白";
+objData[41][13]=" 33.588333 ";
+objData[41][14]=" 135.91 ";
+
+objName[42]="1-1060";
+objData[42][0]="その他(不明を含む)";
+objData[42][1]="2010-07-13T19:20:00";
+objData[42][2]="滋賀県";
+objData[42][3]="近江八幡市";
+objData[42][4]="津田町";
+objData[42][5]="F0";
+objData[42][6]="200m";
+objData[42][7]="6km";
+objData[42][8]="不明";
+objData[42][9]="空白";
+objData[42][10]="不明";
+objData[42][11]="梅雨前線";
+objData[42][12]="ビニルハウスが２方向から押されたようにねじれて全壊していたが、竜巻と断定はできなかった。";
+objData[42][13]=" 35.153888 ";
+objData[42][14]=" 136.0666667 ";
+
+objName[43]="1-1067";
+objData[43][0]="ダウンバーストまたはガスト";
+objData[43][1]="2010-07-25T17:15:00";
+objData[43][2]="奈良県";
+objData[43][3]="奈良市";
+objData[43][4]="富雄川西二丁目";
+objData[43][5]="F0";
+objData[43][6]="100m";
+objData[43][7]="1km";
+objData[43][8]="空白";
+objData[43][9]="空白";
+objData[43][10]="陸上";
+objData[43][11]="太平洋高気圧";
+objData[43][12]="空白";
+objData[43][13]=" 34.696111 ";
+objData[43][14]=" 135.7316667 ";
+
+objName[44]="1-1150";
+objData[44][0]="その他(不明を含む)";
+objData[44][1]="2010-12-02T23:30:00";
+objData[44][2]="三重県";
+objData[44][3]="北牟婁郡紀北町";
+objData[44][4]="紀伊長島区海野";
+objData[44][5]="F0";
+objData[44][6]="30m";
+objData[44][7]="1km";
+objData[44][8]="空白";
+objData[44][9]="空白";
+objData[44][10]="陸上";
+objData[44][11]="日本海低気圧";
+objData[44][12]="空白";
+objData[44][13]=" 34.1875 ";
+objData[44][14]=" 136.3205556 ";
+
+objName[45]="1-1193";
+objData[45][0]="竜巻";
+objData[45][1]="1962-11-03T10:40:00";
+objData[45][2]="三重県";
+objData[45][3]="南牟婁郡紀宝町";
+objData[45][4]="井田地内（熊野川河口付近）";
+objData[45][5]="不明";
+objData[45][6]="不明";
+objData[45][7]="空白";
+objData[45][8]="空白";
+objData[45][9]="空白";
+objData[45][10]="空白";
+objData[45][11]="温暖前線";
+objData[45][12]="空白";
+objData[45][13]=" 33.728694 ";
+objData[45][14]=" 136.011086 ";
+
+objName[46]="1-1202";
+objData[46][0]="竜巻";
+objData[46][1]="1964-04-26T11:00:00";
+objData[46][2]="和歌山県";
+objData[46][3]="西牟婁郡上富田町";
+objData[46][4]="立平地区～上岩田地区";
+objData[46][5]="不明";
+objData[46][6]="不明";
+objData[46][7]="空白";
+objData[46][8]="空白";
+objData[46][9]="空白";
+objData[46][10]="空白";
+objData[46][11]="寒冷前線";
+objData[46][12]="空白";
+objData[46][13]=" 33.707223 ";
+objData[46][14]=" 135.443959 ";
+
+objName[47]="1-1282";
+objData[47][0]="竜巻";
+objData[47][1]="1973-07-02T12:30:00";
+objData[47][2]="京都府";
+objData[47][3]="南区川島後反町";
+objData[47][4]="～桂川右岸";
+objData[47][5]="不明";
+objData[47][6]="不明";
+objData[47][7]="空白";
+objData[47][8]="空白";
+objData[47][9]="空白";
+objData[47][10]="空白";
+objData[47][11]="日本海低気圧";
+objData[47][12]="空白";
+objData[47][13]=" 34.969847 ";
+objData[47][14]=" 135.71188 ";
+
+objName[48]="1-1328";
+objData[48][0]="竜巻";
+objData[48][1]="1978-01-05T12:00:00";
+objData[48][2]="福井県";
+objData[48][3]="三国町";
+objData[48][4]="空白";
+objData[48][5]="不明";
+objData[48][6]="不明";
+objData[48][7]="空白";
+objData[48][8]="空白";
+objData[48][9]="空白";
+objData[48][10]="空白";
+objData[48][11]="空白";
+objData[48][12]="空白";
+objData[48][13]=" 36.217652 ";
+objData[48][14]=" 136.157513 ";
+
+objName[49]="1-1334";
+objData[49][0]="竜巻";
+objData[49][1]="1978-09-15T22:45:00";
+objData[49][2]="和歌山県";
+objData[49][3]="日高郡南部町";
+objData[49][4]="西岩代地区";
+objData[49][5]="不明";
+objData[49][6]="不明";
+objData[49][7]="空白";
+objData[49][8]="空白";
+objData[49][9]="空白";
+objData[49][10]="空白";
+objData[49][11]="台風";
+objData[49][12]="空白";
+objData[49][13]=" 33.781573 ";
+objData[49][14]=" 135.279808 ";
+
+objName[50]="1-1335";
+objData[50][0]="竜巻";
+objData[50][1]="1978-09-16T00:10:00";
+objData[50][2]="和歌山県";
+objData[50][3]="西牟婁郡串本潮岬";
+objData[50][4]="空白";
+objData[50][5]="不明";
+objData[50][6]="不明";
+objData[50][7]="空白";
+objData[50][8]="空白";
+objData[50][9]="空白";
+objData[50][10]="空白";
+objData[50][11]="台風";
+objData[50][12]="空白";
+objData[50][13]=" 33.437243 ";
+objData[50][14]=" 135.755739 ";
+
+objName[51]="1-1338";
+objData[51][0]="竜巻";
+objData[51][1]="1978-09-29T14:20:00";
+objData[51][2]="和歌山県";
+objData[51][3]="田辺市";
+objData[51][4]="元町目良地区";
+objData[51][5]="不明";
+objData[51][6]="不明";
+objData[51][7]="空白";
+objData[51][8]="空白";
+objData[51][9]="空白";
+objData[51][10]="空白";
+objData[51][11]="南岸低気圧";
+objData[51][12]="空白";
+objData[51][13]=" 33.740115 ";
+objData[51][14]=" 135.357442 ";
+
+objName[52]="1-1358";
+objData[52][0]="竜巻";
+objData[52][1]="1980-02-02T08:20:00";
+objData[52][2]="福井県";
+objData[52][3]="坂井郡三国町";
+objData[52][4]="三国1－4";
+objData[52][5]="不明";
+objData[52][6]="不明";
+objData[52][7]="空白";
+objData[52][8]="空白";
+objData[52][9]="空白";
+objData[52][10]="空白";
+objData[52][11]="大陸高気圧";
+objData[52][12]="空白";
+objData[52][13]=" 36.205776 ";
+objData[52][14]=" 136.150045 ";
+
+objName[53]="1-1360";
+objData[53][0]="竜巻";
+objData[53][1]="1980-07-25T15:50:00";
+objData[53][2]="三重県";
+objData[53][3]="度会郡小俣町";
+objData[53][4]="相合小俣中学校";
+objData[53][5]="不明";
+objData[53][6]="不明";
+objData[53][7]="空白";
+objData[53][8]="空白";
+objData[53][9]="空白";
+objData[53][10]="空白";
+objData[53][11]="南岸低気圧";
+objData[53][12]="空白";
+objData[53][13]=" 34.507547 ";
+objData[53][14]=" 136.669536 ";
+
+objName[54]="1-1456";
+objData[54][0]="竜巻";
+objData[54][1]="1989-09-19T22:15:00";
+objData[54][2]="三重県";
+objData[54][3]="熊野市";
+objData[54][4]="有馬町志原尻地区";
+objData[54][5]="不明";
+objData[54][6]="不明";
+objData[54][7]="空白";
+objData[54][8]="空白";
+objData[54][9]="空白";
+objData[54][10]="空白";
+objData[54][11]="台風";
+objData[54][12]="空白";
+objData[54][13]=" 33.848178 ";
+objData[54][14]=" 136.069772 ";
+
+var new1,win1p;
+function CenterOpen () {
+if (win1p=="on") {
+if (new1.closed) {} else {new1.close();}
+}
+win1p = "on";
+new1=window.open("", "_blank", "resizable=1,scrollbars = yes,width=800,height=600");
+if(navigator.appVersion.charAt(0)>=3){new1.focus()};
+new1.document.clear();
+new1.document.write("<html><head><meta http-equiv=Content-Type content=\"text/html charset=x-sjis\"><title>View Window</title></head><body bgcolor=#FFFFFF>");
+new1.document.write("<STYLE TYPE=\"text/css\"><!--.table1 { border-collapse: collapse; border: 1px #1C79C6 solid;}"); 
+new1.document.write(".table1 TD { border: 1px #1C79C6 solid;}--></STYLE>"); 
+new1.document.write("<table CLASS='table1'>");
+new1.document.write("<tr><td></td>");
+for(n = 0; n <  DTNum ; ++n){
+new1.document.write("<td>" + DataTitle[n] + "</td>");
+}
+if(LinkNum != -1){
+for(n = 0; n < LinkNum; ++n){
+new1.document.write("<td>リンク</td>")
+}
+}
+new1.document.write("</tr>")
+new1.document.write("<tr><td></td>");
+for(n = 0; n <  DTNum ; ++n){
+new1.document.write("<td>" + DataUnit[n] + "</td>");
+}
+if(LinkNum != -1){
+for(n = 0; n < LinkNum; ++n){
+new1.document.write("<td></td>");
+}
+}
+for(i = 0; i <  ObJNum ; ++i){
+new1.document.write("<tr>");
+new1.document.write("<td>" + objName[i] + "</td>");
+for(n = 0; n <  DTNum ; ++n){
+new1.document.write("<td>" + objData[i][n] + "</td>");
+}
+if(LinkNum != -1){
+for(n = 0; n < LinkNum; ++n){
+if(objLinkAddress[i][n] != ""){
+new1.document.write("<td><a href = '" + objLinkAddress[i][n] + "' target='_blank'>" +objLinkName[i][n] + "</a></td>");
+}}
+}
+new1.document.write("</tr>");
+}
+new1.document.write("</table>");
+new1.document.write("<center><form><input type=button value='このウインドウを閉じる' onClick='window.close()'></form></center>");
+new1.document.write("</body></html>");
+new1.document.close();
+}
+function Msg(e,index){
+var MSGC;
+var x = e.x;
+var y = e.y;
+if(x == undefined){
+x = e.pageX;
+y = e.pageY;
+}
+if(index==-1){
+MSGC="" ;
+}else{
+MSGC="<TABLE border=0 bgcolor='#ffffcc'>"+ Set_Table(index) +"</TABLE>" ;
+}
+	box.innerHTML = MSGC;
+	box.style.left=document.body.scrollLeft+x+10;
+	box.style.top=document.body.scrollTop+y+10;
+}
+function Msg2(e,index){
+var MSGC;
+var x = e.x;
+var y = e.y;
+if(x == undefined){
+x = e.pageX;
+y = e.pageY;
+}
+if(index==-1){
+MSGC="" ;
+}else{
+Msg(e,-1);
+MSGC="<TABLE CLASS='table1' bgcolor='#ffffcc'>"+ Set_Table(index) +"<TR><TD ALIGN=CENTER><SMALL><A Href =\"#\" onClick=\"Msg2(event,-1)\">閉じる</A></SMALL></TD></TR></TABLE>"
+}
+	box2.innerHTML = MSGC;
+	box2.style.left=document.body.scrollLeft+x+10;
+	box2.style.top=document.body.scrollTop+y+10;
+}
+function Set_Table(index){
+var table_v;
+table_v = "<TR><TD>" + objName[index] + "</TD></TR>"
+table_v = table_v +"<TR><TD><SMALL>";
+for(n = 0; n < DTNum; ++n){
+table_v = table_v + DataTitle[n] + "： "+ objData[index][n] + DataUnit[n] +"<BR>";
+}
+if(LinkNum != -1){
+for(n = 0; n < LinkNum; ++n){
+if(objLinkAddress[index][n] != ""){
+table_v = table_v + "<a href = '" + objLinkAddress[index][n] + "' target='_blank'>" +objLinkName[index][n] + "</a><BR>"}
+}
+}
+table_v = table_v + "</SMALL></TD></TR>";
+return table_v;
+}
+//-->
+</SCRIPT>
+</HEAD>
+<BODY>
+<DIV id=box style="position: absolute"></DIV>
+<DIV id=box2 style="position: absolute"></DIV>
+<center><IMG SRC=tatsumaki_rireki_map.png USEMAP="#mapdata" > 
+<form><input type=button value='データ一覧表示' onClick='CenterOpen()'></form></center>
+<MAP NAME=mapdata>
+<!--1-70-->
+<AREA onMouseOver="Msg(event,0)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,0)" SHAPE=circle COORDS=369,281,7 >
+<!--1-99-->
+<AREA onMouseOver="Msg(event,1)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,1)" SHAPE=circle COORDS=302,495,7 >
+<!--1-124-->
+<AREA onMouseOver="Msg(event,2)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,2)" SHAPE=circle COORDS=375,292,7 >
+<!--1-175-->
+<AREA onMouseOver="Msg(event,3)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,3)" SHAPE=circle COORDS=147,414,7 >
+<!--1-192-->
+<AREA onMouseOver="Msg(event,4)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,4)" SHAPE=circle COORDS=269,184,7 >
+<!--1-206-->
+<AREA onMouseOver="Msg(event,5)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,5)" SHAPE=circle COORDS=198,553,7 >
+<!--1-241-->
+<AREA onMouseOver="Msg(event,6)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,6)" SHAPE=circle COORDS=165,510,7 >
+<!--1-278-->
+<AREA onMouseOver="Msg(event,7)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,7)" SHAPE=circle COORDS=242,290,7 >
+<!--1-287-->
+<AREA onMouseOver="Msg(event,8)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,8)" SHAPE=circle COORDS=179,515,7 >
+<!--1-322-->
+<AREA onMouseOver="Msg(event,9)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,9)" SHAPE=circle COORDS=219,561,7 >
+<!--1-325-->
+<AREA onMouseOver="Msg(event,10)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,10)" SHAPE=circle COORDS=397,292,7 >
+<!--1-391-->
+<AREA onMouseOver="Msg(event,11)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,11)" SHAPE=circle COORDS=113,170,7 >
+<!--1-413-->
+<AREA onMouseOver="Msg(event,12)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,12)" SHAPE=circle COORDS=251,303,7 >
+<!--1-414-->
+<AREA onMouseOver="Msg(event,13)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,13)" SHAPE=circle COORDS=332,251,7 >
+<!--1-437-->
+<AREA onMouseOver="Msg(event,14)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,14)" SHAPE=circle COORDS=309,57,7 >
+<!--1-443-->
+<AREA onMouseOver="Msg(event,15)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,15)" SHAPE=circle COORDS=300,79,7 >
+<!--1-449-->
+<AREA onMouseOver="Msg(event,16)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,16)" SHAPE=circle COORDS=284,532,7 >
+<!--1-465-->
+<AREA onMouseOver="Msg(event,17)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,17)" SHAPE=circle COORDS=297,172,7 >
+<!--1-473-->
+<AREA onMouseOver="Msg(event,18)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,18)" SHAPE=circle COORDS=323,258,7 >
+<!--1-475-->
+<AREA onMouseOver="Msg(event,19)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,19)" SHAPE=circle COORDS=401,285,7 >
+<!--1-487-->
+<AREA onMouseOver="Msg(event,20)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,20)" SHAPE=circle COORDS=317,75,7 >
+<!--1-493-->
+<AREA onMouseOver="Msg(event,21)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,21)" SHAPE=circle COORDS=215,281,7 >
+<!--1-494-->
+<AREA onMouseOver="Msg(event,22)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,22)" SHAPE=circle COORDS=152,274,7 >
+<!--1-500-->
+<AREA onMouseOver="Msg(event,23)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,23)" SHAPE=circle COORDS=331,116,7 >
+<!--1-510-->
+<AREA onMouseOver="Msg(event,24)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,24)" SHAPE=circle COORDS=297,111,7 >
+<!--1-521-->
+<AREA onMouseOver="Msg(event,25)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,25)" SHAPE=circle COORDS=300,136,7 >
+<!--1-566-->
+<AREA onMouseOver="Msg(event,26)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,26)" SHAPE=circle COORDS=209,380,7 >
+<!--1-567-->
+<AREA onMouseOver="Msg(event,27)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,27)" SHAPE=circle COORDS=364,89,7 >
+<!--1-575-->
+<AREA onMouseOver="Msg(event,28)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,28)" SHAPE=circle COORDS=186,344,7 >
+<!--1-593-->
+<AREA onMouseOver="Msg(event,29)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,29)" SHAPE=circle COORDS=154,503,7 >
+<!--1-602-->
+<AREA onMouseOver="Msg(event,30)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,30)" SHAPE=circle COORDS=197,328,7 >
+<!--1-681-->
+<AREA onMouseOver="Msg(event,31)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,31)" SHAPE=circle COORDS=181,532,7 >
+<!--1-684-->
+<AREA onMouseOver="Msg(event,32)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,32)" SHAPE=circle COORDS=158,506,7 >
+<!--1-686-->
+<AREA onMouseOver="Msg(event,33)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,33)" SHAPE=circle COORDS=162,504,7 >
+<!--1-706-->
+<AREA onMouseOver="Msg(event,34)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,34)" SHAPE=circle COORDS=42,191,7 >
+<!--1-710-->
+<AREA onMouseOver="Msg(event,35)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,35)" SHAPE=circle COORDS=322,244,7 >
+<!--1-719-->
+<AREA onMouseOver="Msg(event,36)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,36)" SHAPE=circle COORDS=253,280,7 >
+<!--1-828-->
+<AREA onMouseOver="Msg(event,37)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,37)" SHAPE=circle COORDS=120,346,7 >
+<!--1-968-->
+<AREA onMouseOver="Msg(event,38)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,38)" SHAPE=circle COORDS=324,258,7 >
+<!--1-985-->
+<AREA onMouseOver="Msg(event,39)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,39)" SHAPE=circle COORDS=125,243,7 >
+<!--1-991-->
+<AREA onMouseOver="Msg(event,40)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,40)" SHAPE=circle COORDS=256,303,7 >
+<!--1-1056-->
+<AREA onMouseOver="Msg(event,41)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,41)" SHAPE=circle COORDS=274,548,7 >
+<!--1-1060-->
+<AREA onMouseOver="Msg(event,42)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,42)" SHAPE=circle COORDS=299,260,7 >
+<!--1-1067-->
+<AREA onMouseOver="Msg(event,43)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,43)" SHAPE=circle COORDS=245,345,7 >
+<!--1-1150-->
+<AREA onMouseOver="Msg(event,44)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,44)" SHAPE=circle COORDS=341,438,7 >
+<!--1-1193-->
+<AREA onMouseOver="Msg(event,45)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,45)" SHAPE=circle COORDS=290,522,7 >
+<!--1-1202-->
+<AREA onMouseOver="Msg(event,46)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,46)" SHAPE=circle COORDS=198,526,7 >
+<!--1-1282-->
+<AREA onMouseOver="Msg(event,47)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,47)" SHAPE=circle COORDS=241,294,7 >
+<!--1-1328-->
+<AREA onMouseOver="Msg(event,48)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,48)" SHAPE=circle COORDS=314,63,7 >
+<!--1-1334-->
+<AREA onMouseOver="Msg(event,49)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,49)" SHAPE=circle COORDS=171,513,7 >
+<!--1-1335-->
+<AREA onMouseOver="Msg(event,50)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,50)" SHAPE=circle COORDS=249,575,7 >
+<!--1-1338-->
+<AREA onMouseOver="Msg(event,51)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,51)" SHAPE=circle COORDS=184,520,7 >
+<!--1-1358-->
+<AREA onMouseOver="Msg(event,52)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,52)" SHAPE=circle COORDS=313,65,7 >
+<!--1-1360-->
+<AREA onMouseOver="Msg(event,53)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,53)" SHAPE=circle COORDS=397,379,7 >
+<!--1-1456-->
+<AREA onMouseOver="Msg(event,54)" onMouseOut="Msg(event,-1)" onClick="Msg2(event,54)" SHAPE=circle COORDS=300,500,7 >
+</MAP>
+</BODY>
+</HTML>
